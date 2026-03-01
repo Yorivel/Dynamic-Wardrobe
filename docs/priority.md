@@ -6,6 +6,10 @@ description: How the mod decides which outfit to apply
 
 When V moves to a new location or enters a new context, Dynamic Wardrobe picks the best outfit using a strict order. Higher priority always wins.
 
+## Quest Outfits
+
+When the game forces V into a quest outfit (e.g. the diving suit), Dynamic Wardrobe steps back completely — no swaps of any kind until the quest outfit is removed.
+
 ## Pinned Outfits
 
 A `!`-prefixed outfit blocks everything — no location, region, combat, or danger zone swaps. Only scenes that naturally change V's appearance (home entry, shower, ripper) can override it, and doing so consumes the pin. See [Pinned Outfits](pinned.md) for details.
@@ -41,7 +45,9 @@ For details on how matching, separators, and keyword stacking work, see [Priorit
 
 ```mermaid
 flowchart TD
-    A[V enters a new location] --> B{Pinned outfit?}
+    A[V enters a new location] --> Q{Quest outfit active?}
+    Q -- Yes --> R[All swaps disabled]
+    Q -- No --> B{Pinned outfit?}
     B -- Yes --> C[Skip all swaps]
     B -- No --> D{Combat or hostile area?}
     D -- Yes --> E[Combat outfit]

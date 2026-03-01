@@ -43,8 +43,4 @@ V's outfits: **`combat`**, **`combat street`**, **`combat wild`**
 * Location swaps are **paused during fights** — V won't change into a location outfit mid-combat
 * If the previous outfit no longer exists when combat ends, the mod picks the best match for V's current location instead
 
-## Quest Outfit Protection
-
-When the game forces V into a quest outfit (e.g. the diving suit), Dynamic Wardrobe steps back completely — no swaps of any kind until the quest outfit is removed.
-
 For how combat outfits interact with the rest of the system, see [Priority System](priority.md).
