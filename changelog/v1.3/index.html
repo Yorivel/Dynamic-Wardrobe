@@ -1,0 +1,1306 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Combat Outfits, Scene Tier Guard, Internal Refactoring">
+      
+      
+      
+        <link rel="canonical" href="https://strahlimeier.github.io/dynamic-wardrobe/changelog/v1.3/">
+      
+      
+        <link rel="prev" href="../v1.4/">
+      
+      
+        <link rel="next" href="../v1.2.1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>v1.3 - Dynamic Wardrobe</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#v13" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Dynamic Wardrobe" class="md-header__button md-logo" aria-label="Dynamic Wardrobe" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a3.5 3.5 0 0 0-3.5 3.5h2A1.5 1.5 0 0 1 12 6a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 9c-.55 0-1 .45-1 1v1.75L2.4 18.2A1 1 0 0 0 3 20h18a1 1 0 0 0 .6-1.8L13 11.75v-.9a3.5 3.5 0 0 0 2.5-3.35A3.5 3.5 0 0 0 12 4m0 9.5 6 4.5H6Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dynamic Wardrobe
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              v1.3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dynamic Wardrobe" class="md-nav__button md-logo" aria-label="Dynamic Wardrobe" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a3.5 3.5 0 0 0-3.5 3.5h2A1.5 1.5 0 0 1 12 6a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 9c-.55 0-1 .45-1 1v1.75L2.4 18.2A1 1 0 0 0 3 20h18a1 1 0 0 0 .6-1.8L13 11.75v-.9a3.5 3.5 0 0 0 2.5-3.35A3.5 3.5 0 0 0 12 4m0 9.5 6 4.5H6Z"/></svg>
+
+    </a>
+    Dynamic Wardrobe
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outfit Keywords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../priority/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priority System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../combat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combat & Danger Zones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pinned/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pinned Outfits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apartments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Apartments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compatibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compatibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../save-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Save Data & Uninstall
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Changelog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1.3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1.3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-feature-combat-outfits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Feature: Combat Outfits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fix-scene-tier-location-guard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fix: Scene Tier Location Guard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-refactoring-edge-case-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal Refactoring &amp; Edge Case Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.2.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1.2.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-feature-combat-outfits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Feature: Combat Outfits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fix-scene-tier-location-guard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fix: Scene Tier Location Guard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-refactoring-edge-case-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal Refactoring &amp; Edge Case Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="v13">v1.3<a class="headerlink" href="#v13" title="Permanent link">&para;</a></h1>
+<h2 id="new-feature-combat-outfits">New Feature: Combat Outfits<a class="headerlink" href="#new-feature-combat-outfits" title="Permanent link">&para;</a></h2>
+<p>Automatically swap to a combat outfit when V enters combat or a dangerous zone (shoot-on-sight areas), and restore the previous outfit when leaving.</p>
+<ul>
+<li><strong>Basic usage</strong> — name an Equipment-EX outfit with the keyword <code>combat</code> (e.g. "combat", "combat gear") and it applies everywhere during combat or dangerous zones</li>
+<li><strong>Context-aware combat</strong> — combine <code>combat</code> with context keywords for area-specific combat gear:</li>
+<li><code>combat street</code> → only in street areas</li>
+<li><code>combat wild</code> → only in wild/badlands areas</li>
+<li><code>combat street club</code> → only at street clubs (e.g. Afterlife) — highest context score wins</li>
+<li><strong>Location-aware combat</strong> — combine <code>combat</code> with location keywords:</li>
+<li><code>combat badlands</code> → only in Badlands</li>
+<li><code>combat japantown</code> → only in Japantown</li>
+<li><strong>Dangerous zones</strong> — entering a hostile area (e.g. gang hideouts, enemy territory) triggers combat outfits automatically, even before combat starts. If V enters actual combat while in a dangerous zone, the outfit stays. On zone exit, the pre-zone outfit is restored</li>
+<li><strong>Priority</strong>: combat + location match → combat + context match → plain <code>combat</code> fallback</li>
+<li><strong>Restoration</strong>: on combat/zone exit, the pre-combat outfit is restored. If invalid, the normal location/context/outdoor fallback chain runs</li>
+<li><strong>Guards</strong>: combat outfits are skipped at home and during ripperdoc sessions. Location/context outfit changes are suppressed while in combat or dangerous zones</li>
+<li><strong>Isolation</strong>: combat outfits never leak into normal outfit matching, and normal outfits never appear during combat resolution</li>
+</ul>
+<h2 id="bug-fix-scene-tier-location-guard">Bug Fix: Scene Tier Location Guard<a class="headerlink" href="#bug-fix-scene-tier-location-guard" title="Permanent link">&para;</a></h2>
+<p>Dynamic Wardrobe now blocks all location-based outfit changes during high scene tiers (Tier3+), preventing unwanted outfit swaps during braindances, cutscenes, ripperdoc sessions, showers, and any other scripted sequence. Tier2 (walkable scripted areas like shops and clinics) remains unblocked so location outfits can apply naturally.</p>
+<ul>
+<li><strong>Problem</strong> — braindances and other scene transitions involve loading screens that wipe all runtime <code>@addField</code> values. Any runtime flag (like "block location changes") gets reset mid-scene, causing the location callback and <code>OnGameAttached</code> to fire freely — swapping V's outfit mid-scene</li>
+<li><strong>Root cause fix</strong> — uses a <strong>persisted quest fact</strong> (<code>dw_block_location</code>) instead of runtime fields. The <code>OnSceneTierChange</code> callback sets the flag when the game enters Tier3+ (BDs, cutscenes, ripperdoc, showers) and clears it when V returns to Tier1–2 (full gameplay or walkable scripted areas). Tier0 (undefined/uninitialized) is ignored to prevent mid-scene loading screens from clearing the block. The quest fact survives loading screens that wipe runtime state</li>
+<li><strong>Universal coverage</strong> — instead of handling each scene type individually (braindance, ripperdoc, shower, etc.), a single tier-based guard catches all of them. The location callback, <code>OnGameAttached</code>, and <code>WardrobeLeaveHome</code> all check this flag and skip outfit changes when active</li>
+</ul>
+<h2 id="internal-refactoring-edge-case-fixes">Internal Refactoring &amp; Edge Case Fixes<a class="headerlink" href="#internal-refactoring-edge-case-fixes" title="Permanent link">&para;</a></h2>
+<p>A cleanup pass across the entire codebase — more robust and maintainable internals.</p>
+<p><strong>Redundancy Removal:</strong>
+* <strong>Extracted <code>ApplyLocationOrFallback</code> helper</strong> — the location → context → outdoor fallback chain was duplicated in <code>OnWardrobeLocationChanged</code> and <code>WardrobeLeaveHome</code>. Now a single shared method in OutfitManager
+* <strong>Extracted <code>GuardedHomeSync</code> and <code>LoadNudePreserveTracking</code> helpers</strong> — the guarded sync + nude loading pattern was duplicated across <code>UnequipWardrobeSet</code> and <code>OnQuestDisableWardrobeSetRequest</code>. Now two reusable methods in OutfitManager
+* <strong>Extracted <code>PickRandom</code> helper</strong> — the random outfit selection pattern was repeated in three <code>Apply*</code> methods
+* <strong>Removed redundant <code>RefreshOutfitList</code> calls</strong> — <code>HasOutfitForLocation</code> and <code>ApplyContextOutfit</code> no longer refresh the outfit list individually; <code>ApplyLocationOrFallback</code> refreshes once at the top for the entire chain</p>
+<p><strong>Edge Case Fixes:</strong>
+* <strong>Ripper flag stuck on fast travel</strong> — if V fast-travels while in a ripperdoc workspot, <code>OnWorkspotFinishedEvent</code> may never fire, leaving <code>m_wardrobeInRipperWorkspot</code> stuck. The flag is now cleared on any location change (safe because ripper workspots don't trigger location changes)
+* <strong>Missing <code>m_wardrobeReady</code> guard on hangout callback</strong> — <code>OnWardrobeHangoutEnded</code> could theoretically fire during initialization before the mod is ready. Now guarded
+* <strong>WardrobeLeaveHome missing location block guard</strong> — <code>WardrobeLeaveHome</code> now checks <code>IsLocationBlocked</code> before applying outdoor outfit, preventing stale home-exit logic from firing during scene transitions
+* <strong>Ripper outfit corrupts tracking</strong> — during ripperdoc sessions, game events (e.g. <code>UnequipWardrobeSet</code>) call <code>SyncCurrentOutfit</code>, which would pick up the temporary ripper outfit and overwrite the pre-ripper tracking. On workspot exit, the mod would try to "restore" the ripper outfit instead of the actual previous outfit. Fixed by guarding <code>SyncCurrentOutfit</code> to skip when <code>m_wardrobeInRipperWorkspot</code> is true
+* <strong>Stale location block on save/load</strong> — <code>OnGameAttached</code> now checks the current PSM tier and clears <code>dw_block_location</code> only on explicit Tier1 (<code>== 1</code>), not Tier0 (<code>== 0</code>, undefined/uninitialized). Mid-scene loading screens trigger <code>OnGameAttached</code> with PSM not yet set up (tier 0), so using <code>&lt;= 1</code> would incorrectly clear the block during BDs and cutscenes
+* <strong>Missing <code>IsBlocked()</code> guard on ripperdoc restore</strong> — <code>OnWorkspotFinishedEvent</code> now checks <code>outfitSystem.IsBlocked()</code> before restoring the pre-ripper outfit, preventing quest outfit override on workspot exit</p>
+<p><strong>Code Cleanup:</strong>
+* <strong>Removed dead <code>m_wardrobeInCustomLocation</code> field</strong> — leftover from an earlier design that was never cleaned up. Removed from Fields.reds and all assignment sites
+* <strong>Inverted empty if-block in <code>GetContextOutfits</code></strong> — replaced <code>if bad { } else if good { ... }</code> with <code>if good { ... }</code> for readability
+* <strong>Dynamic context key builder</strong> — <code>ApplyContextOutfit</code> no longer hardcodes keyword order (<code>club</code>, <code>corpo</code>, <code>street</code>, <code>wild</code>). Now sorts the contexts array via bubble sort, making it future-proof for user-defined custom keywords in ContextMap.reds
+* <strong>Removed redundant <code>IsInBraindance</code> helper</strong> — braindance suppression is now fully handled by the persisted <code>dw_block_location</code> scene tier guard. Combat and zone handlers use <code>IsLocationBlocked</code> instead, which covers all Tier3+ scenes (not just BDs)</p>
+<h2 id="technical-details">Technical Details<a class="headerlink" href="#technical-details" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><code>ApplyCombatOutfit</code></strong> — temporarily swaps <code>m_wardrobeOutfitList</code> to combat-only, then reuses the existing location → context fallback chain. Zero duplicated matching logic. Falls back to any combat outfit if no location/context match. Used by both combat entry and dangerous zone entry</li>
+<li><strong>Dangerous zone detection</strong> — wraps the game's existing <code>OnZoneChange</code> callback on PlayerPuppet, which receives <code>SecurityAreaData</code> via a Variant listener on <code>PlayerStateMachine.SecurityZoneData</code>. <code>ESecurityAreaType.DANGEROUS</code> (value 3) triggers the combat outfit. <code>m_wardrobeInDangerousZone</code> flag tracks zone state separately from <code>m_wardrobeInCombat</code> so combat exit knows whether to restore</li>
+<li><strong>Scene tier location guard</strong> — <code>OnSceneTierChange</code> wraps the game's existing PSM callback on PlayerPuppet. Tier3+ sets the persisted <code>dw_block_location</code> quest fact (survives loading screens that wipe runtime <code>@addField</code> values). Tier1–2 clears it (Tier0 is ignored — uninitialized PSM during mid-scene loads). The location callback, combat/zone handlers, <code>OnGameAttached</code>, and <code>WardrobeLeaveHome</code> all check this flag and skip outfit changes when active. Tier2 (walkable scripted areas like shops/clinics) is intentionally unblocked so location outfits apply naturally on entry</li>
+<li><strong><code>ApplyLocationOrFallback</code></strong> — now filters out combat outfits before running the chain, preventing "combat street" from matching as a regular "street" outfit. Single entry point for the fallback chain: <code>RefreshOutfitList</code> → <code>HasOutfitForLocation</code> → <code>ApplyOutfitByLocation</code> / <code>HasContextOutfit</code> → <code>ApplyContextOutfit</code> / <code>ApplyOutfitByPrefix("outdoor")</code>. Called by both <code>OnWardrobeLocationChanged</code> and <code>WardrobeLeaveHome</code></li>
+<li><strong><code>GuardedHomeSync</code></strong> — wraps <code>SyncCurrentOutfit</code> with a home-only filter: syncs, checks <code>IsWearingPrefix("home")</code>, reverts tracking if the synced outfit isn't a home outfit. Prevents scene-triggered syncs from picking up nude/non-home outfits</li>
+<li><strong><code>LoadNudePreserveTracking</code></strong> — saves <code>m_wardrobeLastOutfit</code>/<code>m_wardrobeLastContext</code>, loads nude (cached CName or by prefix), then restores tracking. Used by both <code>UnequipWardrobeSet</code> (drive scene) and <code>OnQuestDisableWardrobeSetRequest</code> (shower/sleep)</li>
+<li><strong>Ripper sync guard</strong> — <code>SyncCurrentOutfit</code> returns immediately when <code>m_wardrobeInRipperWorkspot</code> is true, preventing game events during the ripperdoc session from overwriting the pre-ripper outfit tracking</li>
+<li><strong>Ripper flag reset</strong> — <code>m_wardrobeInRipperWorkspot</code> cleared at the top of <code>OnWardrobeLocationChanged</code>, before any outfit logic runs. Location changes always fire on fast travel, so the flag cannot get stuck</li>
+<li><strong>Context key sort</strong> — <code>ApplyContextOutfit</code> copies the contexts array, bubble-sorts it alphabetically via <code>StrCmp</code>, then joins with <code>+</code> and prefixes with <code>ctx:</code>. Custom keywords added to <code>ContextMap.reds</code> are automatically included in the dedup key</li>
+</ul>
+<h2 id="file-changes">File Changes<a class="headerlink" href="#file-changes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Added</strong></td>
+<td><code>Events/CombatHandler.reds</code> (wraps <code>OnCombatStateChanged</code> + <code>OnZoneChange</code> — combat/danger zone entry/exit with save/restore tracking; <code>IsLocationBlocked</code> guard on both handlers)</td>
+</tr>
+<tr>
+<td><strong>Modified</strong></td>
+<td><code>Core/OutfitManager.reds</code> (added <code>ApplyCombatOutfit</code>, <code>PickRandom</code>, <code>GuardedHomeSync</code>, <code>LoadNudePreserveTracking</code>, <code>ApplyLocationOrFallback</code>; ripper sync guard in <code>SyncCurrentOutfit</code>; combat outfit isolation in normal flow; removed redundant refreshes; dynamic context key sort; inverted empty if-block)</td>
+</tr>
+<tr>
+<td><strong>Modified</strong></td>
+<td><code>Core/Fields.reds</code> (added <code>m_wardrobeInCombat</code>, <code>m_wardrobeInDangerousZone</code>, <code>m_wardrobeReady</code>; removed <code>m_wardrobeInCustomLocation</code>)</td>
+</tr>
+<tr>
+<td><strong>Modified</strong></td>
+<td><code>Events/HomeDetection.reds</code> (replaced duplicated fallback chains with <code>ApplyLocationOrFallback</code>; added combat guard on location changes; added <code>SetLocationBlocked</code>, <code>IsLocationBlocked</code> helpers to HomeDetection class; added <code>dw_block_location</code> guard on location callback and <code>OnGameAttached</code>; stale location block safety clear on load; <code>WardrobeLeaveHome</code> guarded by <code>IsLocationBlocked</code>; added ripper flag reset on location change; removed dead flag assignments; removed redundant <code>IsInBraindance</code> helper)</td>
+</tr>
+<tr>
+<td><strong>Modified</strong></td>
+<td><code>Events/WorkspotHandler.reds</code> (added <code>OnSceneTierChange</code> — sets <code>dw_block_location</code> on Tier3+ entry, clears on Tier1–2 return, ignores Tier0; removed location block from Tier4 <code>OnEnter</code> (now handled by tier change); added <code>IsBlocked()</code> guard to ripperdoc restore)</td>
+</tr>
+<tr>
+<td><strong>Modified</strong></td>
+<td><code>Events/SceneRestore.reds</code> (replaced duplicated sync+nude pattern with <code>GuardedHomeSync</code> + <code>LoadNudePreserveTracking</code>; added <code>m_wardrobeReady</code> guard to hangout callback)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
