@@ -52,7 +52,7 @@ V's outfits: **`outdoor`**, **`corpo casual`**, **`club fancy`**, **`corpo club 
 
 ## Location Keywords
 
-For exact control over a specific spot, press **F10** in-game to see your current location name (e.g. Badlands_RedPeaks), then name an outfit using any word from that name. See [All Location Enums](location-enums.md) for the complete list.
+For exact control over a specific spot, press **F10** in-game to see your current location name (e.g. `Badlands_RedPeaks`), then name an outfit using any word from that name. See [All Location Enums](location-enums.md) for the complete list.
 
 The mod is flexible — `badlands` in your outfit name will match `southbadlands` in the location too. A specific location match always beats a region keyword match.
 
