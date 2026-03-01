@@ -8,23 +8,53 @@ Name your outfits with simple keywords. The mod handles the rest.
 
 ## Getting Started
 
-- [**Quick Setup**](quickstart.md) — create a few outfits, name them, and you're done
-- [**Outfit Keywords**](keywords.md) — full reference of all keywords (activity, region, location)
-- [**Priority System**](priority.md) — how the mod decides which outfit to apply
-- [**Examples**](examples.md) — see how everything comes together with real setups
+{% content-ref url="quickstart.md" %}
+[Quick Setup](quickstart.md)
+{% endcontent-ref %}
+
+{% content-ref url="keywords.md" %}
+[Outfit Keywords](keywords.md)
+{% endcontent-ref %}
+
+{% content-ref url="priority.md" %}
+[Priority System](priority.md)
+{% endcontent-ref %}
+
+{% content-ref url="examples.md" %}
+[Examples](examples.md)
+{% endcontent-ref %}
 
 ## Features
 
-- [**Combat & Danger Zones**](combat.md) — auto-swap gear when things get hostile
-- [**Pinned Outfits**](pinned.md) — lock any outfit with a `!` prefix
-- [**Custom Apartments**](apartments.md) — register modded apartments via config file
+{% content-ref url="combat.md" %}
+[Combat & Danger Zones](combat.md)
+{% endcontent-ref %}
+
+{% content-ref url="pinned.md" %}
+[Pinned Outfits](pinned.md)
+{% endcontent-ref %}
+
+{% content-ref url="apartments.md" %}
+[Custom Apartments](apartments.md)
+{% endcontent-ref %}
 
 ## Reference
 
-- [**Known Issues**](issues.md) — limitations and workarounds
-- [**Compatibility**](compatibility.md) — what this mod wraps and what might conflict
-- [**Save Data & Uninstall**](save-data.md) — safe to remove at any time
-- [**Changelog**](changelog/index.md) — version history
+{% content-ref url="issues.md" %}
+[Known Issues](issues.md)
+{% endcontent-ref %}
+
+{% content-ref url="compatibility.md" %}
+[Compatibility](compatibility.md)
+{% endcontent-ref %}
+
+{% content-ref url="save-data.md" %}
+[Save Data & Uninstall](save-data.md)
+{% endcontent-ref %}
+
+{% content-ref url="changelog/README.md" %}
+[Changelog](changelog/README.md)
+{% endcontent-ref %}
 
 ---
 
@@ -60,8 +90,9 @@ These mods are not required, but unlock additional features. Without them, the r
 
 ## Updating
 
-!!! warning "Always delete the old version before installing a new one"
-    Leftover scripts from previous versions can cause conflicts and errors. `CustomApartments.reds` and `ContextMap.reds` are user-editable config files — back them up before deleting, as new versions will overwrite them.
+{% hint style="warning" %}
+**Always delete the old version before installing a new one.** Leftover scripts from previous versions can cause conflicts and errors. `CustomApartments.reds` and `ContextMap.reds` are user-editable config files — back them up before deleting, as new versions will overwrite them.
+{% endhint %}
 
 1. Back up `Core/CustomApartments.reds` and `Core/ContextMap.reds` if you've customized them
 2. **Delete** the `r6/scripts/Dynamic Wardrobe` folder and `r6/input/DynamicWardrobeInput.xml`
