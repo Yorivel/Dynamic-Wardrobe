@@ -34,7 +34,8 @@ When none of the above contexts apply, the mod picks an outfit based on where V 
 
 For details on how matching, separators, and keyword stacking work, see [Priority Details](priority-advanced.md).
 
-## Visual Summary
+<details>
+<summary>Visual Summary</summary>
 
 ```mermaid
 flowchart TD
@@ -56,3 +57,5 @@ flowchart TD
     style O fill:none,stroke:#888,stroke-dasharray: 5 5
     O["Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits"]
 ```
+
+</details>
