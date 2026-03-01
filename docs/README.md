@@ -4,7 +4,7 @@ description: Automatic outfit swapping for Cyberpunk 2077 — powered by Equipme
 
 # Dynamic Wardrobe
 
-Name your outfits with simple keywords. The mod handles the rest.
+Not sure where to start? [Quick Setup](quickstart.md) gets you running in under a minute. Already set up? Explore the sections below to get more out of the mod.
 
 ## Getting Started
 
