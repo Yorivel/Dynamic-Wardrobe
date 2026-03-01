@@ -40,16 +40,18 @@ For details on how matching, separators, and keyword stacking work, see [Priorit
 flowchart TD
     A[V enters a new location] --> B{Pinned outfit?}
     B -- Yes --> C[Skip all swaps]
-    B -- No --> D{Home / Nude / Ripper?}
-    D -- Yes --> E{Shower Deferral on?}
-    E -- No --> F[Home outfit]
-    E -- Yes --> G[Wait until undressed]
-    G --> F
-    D -- No --> H{Combat or hostile area?}
-    H -- Yes --> I[Combat outfit]
-    H -- No --> J{Exact location match?}
-    J -- Yes --> K[Use it]
-    J -- No --> L{Region keyword match?}
-    L -- Yes --> M[Best match]
-    L -- No --> N[Outdoor outfit]
+    B -- No --> D{At a ripperdoc?}
+    D -- Yes --> E[Ripper outfit]
+    D -- No --> F{Inside an apartment?}
+    F -- Yes --> G{Shower Deferral on?}
+    G -- No --> H[Home outfit immediately]
+    G -- Yes --> I[Defer until undressed]
+    I --> H
+    F -- No --> J{Combat or hostile area?}
+    J -- Yes --> K[Combat outfit]
+    J -- No --> L{Exact location match?}
+    L -- Yes --> M[Use it]
+    L -- No --> N{Region keyword match?}
+    N -- Yes --> O[Best match]
+    N -- No --> P[Outdoor outfit]
 ```
