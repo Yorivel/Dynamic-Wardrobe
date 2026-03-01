@@ -10,10 +10,10 @@ The Context Map controls which locations belong to which region keywords. Edit `
 
 | Keyword | Where It Applies |
 |---------|-----------------|
-| **corpo** | `CorpoPlaza`, `CityCenter`, `Downtown`, `NorthOaks`, `CharterHill`, `ArasakaWaterfront`, `JapanTown` |
-| **street** | `Glen`, `Wellsprings`, `Arroyo`, `LittleChina`, `Kabuki`, `Northside`, `RanchoCoronado`, `VistaDelRey` |
-| **wild** | `Badlands`, `SouthBadlands`, `NorthBadlands`, `Pacifica`, `Coastview`, `WestWindEstate`, `Dogtown` |
-| **club** | `Afterlife`, `RiotClub`, `LizziesBar`, `Clouds`, `DarkMatter`, `Totentaz`, `Embers`, `ElCoyoteCojo` |
+| **corpo** | Corpo Plaza, City Center, Downtown, North Oaks, Charter Hill, Arasaka Waterfront, Japantown |
+| **street** | Glen, Wellsprings, Arroyo, Little China, Kabuki, Northside, Rancho Coronado, Vista Del Rey |
+| **wild** | Badlands, South Badlands, North Badlands, Pacifica, Coastview, West Wind Estate, Dogtown |
+| **club** | Afterlife, Riot Club, Lizzie's Bar, Clouds, Dark Matter, Totentaz, Embers, El Coyote Cojo |
 
 These keywords are what you use in outfit names — `corpo casual`, `street tough`, `club fancy`, etc. See [Advanced Setup](advanced.md) for how they work in practice.
 

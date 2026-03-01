@@ -12,19 +12,19 @@ Dynamic Wardrobe supports modded apartments. Add an apartment's entrance coordin
 
 | Apartment | Location |
 |-----------|----------|
-| H10 (V's starting apartment) | `LittleChina` |
-| Glen Apartment | `Glen` |
-| Northside Apartment | `Northside` |
-| Japantown Apartment | `JapanTown` |
-| Corpo Plaza Apartment | `CorpoPlaza` |
-| Dogtown Hideout (Kress Street) | `Dogtown` (Phantom Liberty) |
-| Judy's Apartment | `Kabuki` (unlocked by quest) |
+| H10 (V's starting apartment) | Little China |
+| Glen Apartment | Glen |
+| Northside Apartment | Northside |
+| Japantown Apartment | Japantown |
+| Corpo Plaza Apartment | Corpo Plaza |
+| Dogtown Hideout (Kress Street) | Dogtown (Phantom Liberty) |
+| Judy's Apartment | Kabuki (unlocked by quest) |
 
 ### Pre-configured Custom Apartments
 
 | Apartment | Location | Unlock Condition |
 |-----------|----------|-----------------|
-| River's Trailer | `Badlands` | Complete "Following the River" (romance or friendship) |
+| River's Trailer | Badlands | Complete "Following the River" (romance or friendship) |
 
 River's apartment is included as a ready-to-use example in `CustomApartments.reds`.
 
