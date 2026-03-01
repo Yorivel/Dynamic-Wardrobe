@@ -42,7 +42,7 @@ flowchart TD
     B -- Yes --> C[Skip all swaps]
     B -- No --> D{Home / Nude / Ripper?}
     D -- Yes --> E{Shower Deferral on?}
-    E -- No --> F[Context outfit]
+    E -- No --> F[Home outfit]
     E -- Yes --> G[Wait until undressed]
     G --> F
     D -- No --> H{Combat or hostile area?}
