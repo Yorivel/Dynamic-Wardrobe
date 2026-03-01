@@ -36,23 +36,17 @@ For details on how matching, separators, and keyword stacking work, see [Priorit
 
 ## Visual Summary
 
-```
-V enters a new location
-│
-├─ Wearing a pinned (!) outfit?
-│  └─ Yes → skip all swaps
-│
-├─ In combat or a hostile area?
-│  └─ Yes → combat outfit (location/region-aware)
-│
-├─ Inside an apartment?
-│  └─ Yes → home outfit
-│
-├─ Exact location match?
-│  └─ Yes → use it
-│
-├─ Region keyword match?
-│  └─ Yes → use best match (most keywords)
-│
-└─ Nothing matches → outdoor outfit
+```mermaid
+flowchart TD
+    A[V enters a new location] --> B{Pinned outfit?}
+    B -- Yes --> C[Skip all swaps]
+    B -- No --> D{Home / Nude / Ripper?}
+    D -- Yes --> E[Context outfit]
+    D -- No --> F{Combat or hostile area?}
+    F -- Yes --> G[Combat outfit]
+    F -- No --> H{Exact location match?}
+    H -- Yes --> I[Use it]
+    H -- No --> J{Region keyword match?}
+    J -- Yes --> K[Best match]
+    J -- No --> L[Outdoor outfit]
 ```
