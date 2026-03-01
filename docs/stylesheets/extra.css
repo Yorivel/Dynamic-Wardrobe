@@ -159,18 +159,37 @@
   opacity: 0.7;
 }
 
-/* === Search results === */
+/* === Search results — force small === */
 
 .md-search-result .md-typeset {
+  font-size: 0.62rem !important;
+  line-height: 1.5 !important;
+}
+
+.md-search-result__meta {
+  font-size: 0.58rem !important;
+}
+
+[data-md-component="search"] .md-search-result__title {
   font-size: 0.68rem !important;
+  line-height: 1.4 !important;
 }
 
-.md-search-result__title {
-  font-size: 0.75rem !important;
+[data-md-component="search"] .md-search-result__teaser {
+  font-size: 0.58rem !important;
+  line-height: 1.4 !important;
 }
 
-.md-search-result__teaser {
-  font-size: 0.65rem !important;
+.md-search-result__item {
+  padding: 0.4em 0.8em !important;
+}
+
+.md-search-result mark {
+  font-size: inherit !important;
+}
+
+.md-search-result__list {
+  font-size: 0.62rem !important;
 }
 
 /* === Home page grid cards === */
