@@ -1,11 +1,25 @@
 :root {
-  --md-primary-fg-color: #be4c40;
+  --md-primary-fg-color: #007acc;
   --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #3794d4;
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #be4c40;
+  --md-primary-fg-color: #007acc;
   --md-primary-bg-color: #1e1e1e;
+  --md-accent-fg-color: #3794d4;
+  --md-typeset-a-color: #569cd6;
+}
+
+.md-typeset a:hover {
+  color: #9cdcfe;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  color: #d4d4d4;
 }
 
 .md-typeset {
@@ -27,4 +41,16 @@
 
 .md-typeset .headerlink {
   display: none;
+}
+
+.md-search-result .md-typeset {
+  font-size: 0.6rem !important;
+}
+
+.md-search-result__title {
+  font-size: 0.7rem !important;
+}
+
+.md-search-result__teaser {
+  font-size: 0.6rem !important;
 }
