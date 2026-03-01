@@ -61,9 +61,10 @@ flowchart TD
     J -- No --> L{Region keyword match?}
     L -- Yes --> M[Best match]
     L -- No --> N[Outdoor outfit]
-```
 
-*Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits.*
+    style O fill:none,stroke:#888,stroke-dasharray: 5 5
+    O["Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits"]
+```
 
 </div>
 
