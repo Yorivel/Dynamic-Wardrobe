@@ -40,8 +40,8 @@ ArasakaWaterfront
   ArasakaWaterfront_KonpekiPlaza
 JapanTown
   JapanTown_Apartment
-  JapanTown_Clouds               ← club
-  JapanTown_DarkMatter            ← club
+  [club] JapanTown_Clouds
+  [club] JapanTown_DarkMatter
   JapanTown_Fingers
   JapanTown_FourthWallBdStudio
   JapanTown_HiromisApartment
@@ -55,7 +55,7 @@ JapanTown
 ```
 Glen
   Glen_Apartment
-  Glen_Embers                     ← club
+  [club] Glen_Embers
   Glen_MusicStore
   Glen_NCPDLab
   Glen_WichedTires
@@ -70,22 +70,22 @@ Arroyo
   Arroyo_Red_Dirt
   Arroyo_TireEmpire
 LittleChina
-  LittleChina_Afterlife           ← club
+  [club] LittleChina_Afterlife
   LittleChina_MistysShop
   LittleChina_Q101Cyberspace
-  LittleChina_RiotClub            ← club
+  [club] LittleChina_RiotClub
   LittleChina_TomsDiner
   LittleChina_VApartment
   LittleChina_VictorsClinic
 Kabuki
   Kabuki_JudysApartment
-  Kabuki_LizziesBar               ← club
+  [club] Kabuki_LizziesBar
   Kabuki_NoTellMotel
 Northside
   Northside_All_Foods
   Northside_Apartment
   Northside_CleanCut
-  Northside_Totentaz              ← club
+  [club] Northside_Totentaz
   Northside_WNS
 RanchoCoronado
   RanchoCoronado_Caliente
@@ -97,7 +97,7 @@ VistaDelRey
   Vista_del_Rey_Delamain
   Vista_del_Rey_LaCatrina
   Vista_del_rey_Abandoned_Apartment_Building
-  Vista_del_rey_ElCoyoteCojo      ← club
+  [club] Vista_del_rey_ElCoyoteCojo
 ```
 
 ## wild

@@ -33,25 +33,6 @@ V's outfits: **`outdoor`**, **`corpo elegant`**, **`street tough`**, **`club par
 **Custom mappings** — You can customize which locations belong to which region — edit `Core/ContextMap.reds` to remap areas or create entirely new keywords.
 {% endhint %}
 
-## Location Keywords
-
-For exact control over a specific spot, press **F10** in-game to see your current location name (e.g. `Badlands_RedPeaks`), then name an outfit using any word from that name. See [All Location Enums](location-enums.md) for the complete list.
-
-The mod is flexible — `badlands` in your outfit name will match `southbadlands` in the location too. A specific location match always beats a region keyword match.
-
-Use separators to share one outfit across multiple locations: **`badlands/coastview`** works in both.
-
-<details>
-<summary>Example</summary>
-
-V's outfits: **`outdoor casual`**, **`afterlife`**, **`japantown formal`**
-
-* At the Afterlife → **`afterlife`** (exact match wins)
-* In Japantown → **`japantown formal`** (exact match wins)
-* Anywhere else → **`outdoor casual`**
-
-</details>
-
 ## Stacking Keywords
 
 Combine region keywords for more specific matching. If an outfit has multiple region keywords, they all need to match — and more keywords means higher priority.
@@ -68,6 +49,26 @@ V's outfits: **`outdoor`**, **`corpo casual`**, **`club fancy`**, **`corpo club 
 * At Lizzie's Bar (street + club) → **`club fancy`** (`corpo club vip` doesn't apply — not a corpo area)
 * At Corpo Plaza (corpo, no club) → **`corpo casual`**
 * In the Badlands → **`outdoor`**
+
+</details>
+
+## Location Keywords
+
+For exact control over a specific spot, press **F10** in-game to see your current location name (e.g. `Badlands_RedPeaks`), then name an outfit using any word from that name. See [All Location Enums](location-enums.md) for the complete list.
+
+The mod is flexible — `badlands` in your outfit name will match `southbadlands` in the location too. A specific location match always beats a region keyword match.
+
+Use separators to share one outfit across multiple locations: **`badlands/coastview`** works in both.
+
+<details>
+<summary>Example</summary>
+
+V's outfits: **`outdoor casual`**, **`street tough`**, **`afterlife`**, **`badlands/coastview rugged`**
+
+* At the Afterlife → **`afterlife`** (exact location beats the `street` region match)
+* In Kabuki → **`street tough`** (region match, no exact location outfit)
+* In Badlands or Coastview → **`badlands/coastview rugged`** (separator = either location)
+* In Japantown → **`outdoor casual`** (Japantown is `corpo`, not `street` — no match, falls back to outdoor)
 
 </details>
 

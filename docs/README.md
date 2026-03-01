@@ -26,14 +26,6 @@ Name your outfits with simple keywords. The mod handles the rest.
 
 ## Features
 
-{% content-ref url="combat.md" %}
-[Combat & Danger Zones](combat.md)
-{% endcontent-ref %}
-
-{% content-ref url="pinned.md" %}
-[Pinned Outfits](pinned.md)
-{% endcontent-ref %}
-
 {% content-ref url="apartments.md" %}
 [Custom Apartments](apartments.md)
 {% endcontent-ref %}
