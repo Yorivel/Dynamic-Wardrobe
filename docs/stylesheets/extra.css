@@ -7,3 +7,20 @@
   --md-primary-fg-color: #be4c40;
   --md-primary-bg-color: #1e1e1e;
 }
+
+.md-typeset {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.md-typeset h1 {
+  font-size: 1.6rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.25rem;
+}
+
+.md-typeset h3 {
+  font-size: 1rem;
+}
