@@ -54,5 +54,5 @@ flowchart TD
     L -- No --> N[Outdoor outfit]
 
     style O fill:none,stroke:#888,stroke-dasharray: 5 5
-    O["Ripper outfits are temporary scene overrides — they restore the previous outfit when the scene ends"]
+    O["Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits"]
 ```
