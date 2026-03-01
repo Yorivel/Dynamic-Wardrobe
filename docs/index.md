@@ -8,43 +8,23 @@ Name your outfits with simple keywords. The mod handles the rest.
 
 ## Getting Started
 
-<div class="grid-cards" markdown>
-
-[**Quick Setup** *Create a few outfits, name them, and you're done*](quickstart.md)
-
-[**Outfit Keywords** *Full reference of all keywords — activity, region, location*](keywords.md)
-
-[**Priority System** *How the mod decides which outfit to apply*](priority.md)
-
-[**Examples** *See how everything comes together with real setups*](examples.md)
-
-</div>
+- [**Quick Setup**](quickstart.md) — create a few outfits, name them, and you're done
+- [**Outfit Keywords**](keywords.md) — full reference of all keywords (activity, region, location)
+- [**Priority System**](priority.md) — how the mod decides which outfit to apply
+- [**Examples**](examples.md) — see how everything comes together with real setups
 
 ## Features
 
-<div class="grid-cards" markdown>
-
-[**Combat & Danger Zones** *Auto-swap gear when things get hostile*](combat.md)
-
-[**Pinned Outfits** *Lock any outfit with a ! prefix*](pinned.md)
-
-[**Custom Apartments** *Register modded apartments via config file*](apartments.md)
-
-</div>
+- [**Combat & Danger Zones**](combat.md) — auto-swap gear when things get hostile
+- [**Pinned Outfits**](pinned.md) — lock any outfit with a `!` prefix
+- [**Custom Apartments**](apartments.md) — register modded apartments via config file
 
 ## Reference
 
-<div class="grid-cards" markdown>
-
-[**Known Issues** *Limitations and workarounds*](issues.md)
-
-[**Compatibility** *What this mod wraps and what might conflict*](compatibility.md)
-
-[**Save Data & Uninstall** *Safe to remove at any time*](save-data.md)
-
-[**Changelog** *Version history*](changelog/index.md)
-
-</div>
+- [**Known Issues**](issues.md) — limitations and workarounds
+- [**Compatibility**](compatibility.md) — what this mod wraps and what might conflict
+- [**Save Data & Uninstall**](save-data.md) — safe to remove at any time
+- [**Changelog**](changelog/index.md) — version history
 
 ---
 
