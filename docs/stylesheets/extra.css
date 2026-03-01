@@ -24,3 +24,7 @@
 .md-typeset h3 {
   font-size: 0.9rem !important;
 }
+
+.md-typeset .headerlink {
+  display: none;
+}
