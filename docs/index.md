@@ -59,17 +59,17 @@ These mods are not required, but unlock additional features. Without them, the r
 
 ## Updating
 
-!!! warning "Back up your config files"
-    `CustomApartments.reds` and `ContextMap.reds` are user-editable config files. New versions will overwrite them.
+!!! warning "Always delete the old version before installing a new one"
+    Leftover scripts from previous versions can cause conflicts and errors. `CustomApartments.reds` and `ContextMap.reds` are user-editable config files — back them up before deleting, as new versions will overwrite them.
 
 1. Back up `Core/CustomApartments.reds` and `Core/ContextMap.reds` if you've customized them
-2. Delete the `r6/scripts/Dynamic Wardrobe` and `r6/input` folders
+2. **Delete** the `r6/scripts/Dynamic Wardrobe` folder and `r6/input/DynamicWardrobeInput.xml`
 3. Install the new version
 4. Restore your backed-up config files
 
 ## Uninstallation
 
-Delete the `r6/scripts/Dynamic Wardrobe` and `r6/input` folders. See [Save Data & Uninstall](save-data.md) for details on what the mod writes to your save.
+Delete the `r6/scripts/Dynamic Wardrobe` folder and `r6/input/DynamicWardrobeInput.xml`. See [Save Data & Uninstall](save-data.md) for details on what the mod writes to your save.
 
 ---
 
