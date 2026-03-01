@@ -27,3 +27,5 @@ Dynamic Wardrobe writes two quest facts to your save file:
 You can safely remove Dynamic Wardrobe at any time without corrupting your save or causing errors.
 
 Equipment-EX outfits are managed by EX itself — Dynamic Wardrobe only reads and loads them, never creates or modifies outfit data.
+
+See [Known Issues](issues.md) for save/load quirks, or [Support](support.md) if something isn't working as expected.

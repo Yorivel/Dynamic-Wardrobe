@@ -8,7 +8,7 @@ This page explains the mechanics behind [Priority System](priority.md) — how t
 
 ## How Matching Works
 
-Outfit names are split into words by any separator (spaces, slashes, dashes, etc.). Each word is checked against the current location name — the mod is flexible, so `badlands` in an outfit name matches `southbadlands` in the location, and vice versa.
+Outfit names are split into words by any separator (spaces, slashes, dashes, etc.). Each word is checked against the current location name — the mod is flexible, so `badlands` in an outfit name matches `southbadlands` in the location, and vice versa. See [All Location Enums](location-enums.md) for the full list of location names the game reports.
 
 ## Separators
 

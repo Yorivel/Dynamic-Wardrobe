@@ -45,3 +45,7 @@ With Shower Deferral **on**:
 | Walk into the apartment | No change (keeps previous outfit) |
 | Take a shower | **`nude`** |
 | Finish showering | **`home cozy`** (applied for the first time) |
+
+You can toggle Shower Deferral in **Settings → Mod Settings → Dynamic Wardrobe**.
+
+Ready for more? See [Location Matching](locations.md) to learn how outfits can target specific places.

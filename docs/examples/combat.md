@@ -61,3 +61,5 @@ V's outfits: **`outdoor casual`**, **`combat heavy`**
 | Walk into a gang hideout | **`combat heavy`** |
 | Fight starts inside | **`combat heavy`** (no double-swap) |
 | Leave the zone | **`outdoor casual`** (restored) |
+
+For the full combat reference, see [Combat & Danger Zones](../combat.md). For how combat fits into the override order, see [Priority System](../priority.md).

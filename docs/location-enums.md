@@ -150,7 +150,9 @@ Dogtown
 
 ## Other
 
-These locations don't belong to any region keyword.
+These locations don't belong to any region keyword. You can still name an outfit after them for an exact match (e.g. `watson casual`), but no region-based outfit will apply here — `outdoor` is the fallback.
+
+To assign them to a region, add them to `Core/ContextMap.reds`. See [Context Map Guide](context-map-guide.md) for how.
 
 ```
 Heywood

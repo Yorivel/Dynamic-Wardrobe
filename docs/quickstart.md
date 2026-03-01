@@ -16,4 +16,16 @@ That's it! Walk into your apartment and the mod takes over.
 
 Multiple outfits with the same keyword? The mod picks one at random — so **`home cozy`**, **`home towel`**, and **`home lazy`** give V a different look each time.
 
-Don't worry about learning everything at once — get a feel for the basics first, then head over to [Advanced Setup](advanced.md) when you're ready to explore location matching, region keywords, and more.
+{% hint style="info" %}
+**Tip** — There's a **Shower Deferral** option in **Settings → Mod Settings → Dynamic Wardrobe**. When enabled, the home outfit won't apply until after V showers instead of immediately on entry. See [Basics](examples/basics.md) for a side-by-side comparison.
+{% endhint %}
+
+Don't worry about learning everything at once — get a feel for the basics first, then explore further when you're ready.
+
+{% content-ref url="advanced.md" %}
+[Advanced Setup](advanced.md)
+{% endcontent-ref %}
+
+{% content-ref url="examples.md" %}
+[Examples](examples.md)
+{% endcontent-ref %}

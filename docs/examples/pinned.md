@@ -46,3 +46,5 @@ Equip any non-`!` outfit via Equipment-EX and the mod takes over again. No speci
 ## Matching Exclusion
 
 An outfit named **`!home cozy`** will never be automatically picked as a home outfit. The `!` prefix tells the mod to ignore it entirely during matching — it only activates when you manually equip it.
+
+For the full pinning reference, see [Pinned Outfits](../pinned.md). For how pins fit into the override order, see [Priority System](../priority.md).

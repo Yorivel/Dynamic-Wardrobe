@@ -24,7 +24,7 @@ Skipping the ripperdoc animation may occasionally cause the outfit to not swap c
 
 ## Heavy Hearts Not Detected
 
-Heavy Hearts doesn't have a location name in the game's data, so the `club` keyword can't detect it. All other nightlife venues work fine.
+Heavy Hearts doesn't have a location name in the game's data, so the `club` keyword can't detect it. All other nightlife venues work fine — see [All Location Enums](location-enums.md) for the full list.
 
 ## Custom Apartments Need a Scene Transition
 

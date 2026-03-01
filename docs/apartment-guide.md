@@ -55,6 +55,14 @@ The mod detects custom apartments by watching for a specific game state change (
 
 ## Finding Coordinates
 
-The config file includes console commands for looking up entrance coordinates and quest facts using Cyber Engine Tweaks. Open the CET console in-game to use them.
+Stand in front of the apartment door and run these commands in the [Cyber Engine Tweaks](https://www.nexusmods.com/cyberpunk2077/mods/107) console:
+
+```lua
+-- Get V's current position (use for .Entrance coordinates)
+print(Game.GetPlayer():GetWorldPosition())
+
+-- Check a quest fact value (use for .Gate / .OrGate)
+print(Game.GetQuestsSystem():GetFact(CName.new("quest_fact_name")))
+```
 
 For the list of built-in apartments, see [Custom Apartments](apartments.md).
