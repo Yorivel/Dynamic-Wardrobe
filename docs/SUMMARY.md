@@ -15,6 +15,7 @@
   * [Combat](examples/combat.md)
   * [Pinned Outfits](examples/pinned.md)
 * [Custom Apartments](apartments.md)
+  * [Configuration Guide](apartment-guide.md)
 * [Known Issues](issues.md)
 * [Compatibility](compatibility.md)
 * [Save Data & Uninstall](save-data.md)
