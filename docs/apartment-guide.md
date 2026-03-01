@@ -49,10 +49,6 @@ DWApartment.Add(apartments, false)
 
 The mod detects custom apartments by watching for a specific game state change (scene tier transition) while V is near the configured door coordinates (~1 meter). When V leaves, the mod detects the transition back to normal gameplay and switches to the appropriate outfit.
 
-{% hint style="info" %}
-**Why some locations won't work** — Custom apartment detection relies on the game's scene tier system. When V walks through a door into an interior, the game transitions from Tier 1 (free roam) to Tier 2 (restricted movement) — that transition is what the mod listens for. Open-air locations like camps, tents, or rooftops never trigger this transition because there's no loading door, so the mod has no event to react to.
-{% endhint %}
-
 ## Finding Coordinates
 
 Stand in front of the apartment door and run these commands in the [Cyber Engine Tweaks](https://www.nexusmods.com/cyberpunk2077/mods/107) console:
