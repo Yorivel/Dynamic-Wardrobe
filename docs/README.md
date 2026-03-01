@@ -8,23 +8,53 @@ Name your outfits with simple keywords. The mod handles the rest.
 
 ## Getting Started
 
-* [Quick Setup](quickstart.md)
-* [Outfit Keywords](keywords.md)
-* [Priority System](priority.md)
-* [Examples](examples.md)
+{% content-ref url="quickstart.md" %}
+[Quick Setup](quickstart.md)
+{% endcontent-ref %}
+
+{% content-ref url="keywords.md" %}
+[Outfit Keywords](keywords.md)
+{% endcontent-ref %}
+
+{% content-ref url="priority.md" %}
+[Priority System](priority.md)
+{% endcontent-ref %}
+
+{% content-ref url="examples.md" %}
+[Examples](examples.md)
+{% endcontent-ref %}
 
 ## Features
 
-* [Combat & Danger Zones](combat.md)
-* [Pinned Outfits](pinned.md)
-* [Custom Apartments](apartments.md)
+{% content-ref url="combat.md" %}
+[Combat & Danger Zones](combat.md)
+{% endcontent-ref %}
+
+{% content-ref url="pinned.md" %}
+[Pinned Outfits](pinned.md)
+{% endcontent-ref %}
+
+{% content-ref url="apartments.md" %}
+[Custom Apartments](apartments.md)
+{% endcontent-ref %}
 
 ## Reference
 
-* [Known Issues](issues.md)
-* [Compatibility](compatibility.md)
-* [Save Data & Uninstall](save-data.md)
-* [Changelog](changelog/README.md)
+{% content-ref url="issues.md" %}
+[Known Issues](issues.md)
+{% endcontent-ref %}
+
+{% content-ref url="compatibility.md" %}
+[Compatibility](compatibility.md)
+{% endcontent-ref %}
+
+{% content-ref url="save-data.md" %}
+[Save Data & Uninstall](save-data.md)
+{% endcontent-ref %}
+
+{% content-ref url="changelog/README.md" %}
+[Changelog](changelog/README.md)
+{% endcontent-ref %}
 
 ## Requirements
 
@@ -56,7 +86,9 @@ These mods are not required, but unlock additional features. Without them, the r
 
 ## Updating
 
-> **Always delete the old version before installing a new one.** Leftover scripts from previous versions can cause conflicts and errors. `CustomApartments.reds` and `ContextMap.reds` are user-editable config files — back them up before deleting, as new versions will overwrite them.
+{% hint style="warning" %}
+**Always delete the old version before installing a new one.** Leftover scripts from previous versions can cause conflicts and errors. `CustomApartments.reds` and `ContextMap.reds` are user-editable config files — back them up before deleting, as new versions will overwrite them.
+{% endhint %}
 
 1. Back up `Core/CustomApartments.reds` and `Core/ContextMap.reds` if you've customized them
 2. **Delete** the `r6/scripts/Dynamic Wardrobe` folder and `r6/input/DynamicWardrobeInput.xml`
