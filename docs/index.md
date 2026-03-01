@@ -2,17 +2,28 @@
 
 **Automatic, context-driven outfit swapping for Cyberpunk 2077 — powered by [Equipment-EX](https://www.nexusmods.com/cyberpunk2077/mods/6945).**
 
-Dynamic Wardrobe transforms how V dresses in Night City by intelligently switching outfits based on where you are and what you're doing — all you do is name your outfits.
+Name your outfits with simple keywords. The mod handles the rest.
 
-- **Location-aware outfit matching** — name an outfit after a location and it applies there automatically
-- **Seamless apartment ↔ outdoor transitions** — walk in, get comfy; walk out, gear up
-- **Scene-aware handling** — showers, ripperdocs, and romance scenes swap outfits naturally
-- **Combat & danger zone swapping** — gear up when things get hostile, restore when it's over
-- **Pinned outfits** — lock any outfit with a `!` prefix to block all automatic swaps
+---
 
-Just name your Equipment-EX outfits with simple keywords and Dynamic Wardrobe handles the rest.
+## Getting Started
 
-*New to the mod?* Head to the [Quick Setup](quickstart.md) guide.
+- [**Quick Setup**](quickstart.md) — create a few outfits, name them, and you're done
+- [**Outfit Keywords**](keywords.md) — full reference of all keywords (activity, region, location)
+- [**Priority System**](priority.md) — how the mod decides which outfit to apply
+
+## Features
+
+- [**Combat & Danger Zones**](combat.md) — auto-swap gear when things get hostile
+- [**Pinned Outfits**](pinned.md) — lock any outfit with a `!` prefix
+- [**Custom Apartments**](apartments.md) — register modded apartments via config file
+
+## Reference
+
+- [**Known Issues**](issues.md) — limitations and workarounds
+- [**Compatibility**](compatibility.md) — what this mod wraps and what conflicts
+- [**Save Data & Uninstall**](save-data.md) — safe to remove at any time
+- [**Changelog**](changelog.md) — version history
 
 ---
 
