@@ -3,33 +3,13 @@ site_description: Automatic outfit swapping for Cyberpunk 2077 — powered by Eq
 site_url: https://strahlimeier.github.io/dynamic-wardrobe/
 
 theme:
-  name: material
-  palette:
-    scheme: slate
-    primary: custom
-    accent: indigo
-  font: false
-  features:
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-  icon:
-    logo: material/hanger
+  name: gitbook
 
 extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - attr_list
-  - md_in_html
   - tables
   - toc:
       permalink: true
