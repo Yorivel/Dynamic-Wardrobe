@@ -6,6 +6,7 @@
   * [Combat & Danger Zones](combat.md)
   * [Pinned Outfits](pinned.md)
   * [Priority System](priority.md)
+  * [Priority Details](priority-advanced.md)
   * [All Location Enums](location-enums.md)
 * [Examples](examples.md)
 * [Custom Apartments](apartments.md)
