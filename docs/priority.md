@@ -1,10 +1,10 @@
 # Priority System
 
-When V moves to a new location, Dynamic Wardrobe picks an outfit using a strict priority chain. Higher priority always wins.
+When V moves to a new location, Dynamic Wardrobe picks the best outfit using a simple order. Higher priority always wins.
 
 ---
 
-## Outfit Selection Order
+## How Outfits Are Picked
 
 ### 1. Exact Location Match *(highest priority)*
 
@@ -22,7 +22,7 @@ More keywords = more specific = higher priority.
 
 > `corpo club` beats `club` at a corpo club.
 
-### 3. `outdoor` Fallback *(lowest priority)*
+### 3. `outdoor` *(lowest priority)*
 
 If nothing else matches, V wears the `outdoor` outfit.
 
@@ -30,35 +30,31 @@ If nothing else matches, V wears the `outdoor` outfit.
 
 ## Special Contexts
 
-These override the normal location flow when they're active:
+These take over when they're active, regardless of location:
 
-| Context | When Active |
-|---------|-------------|
+| Context | When It's Active |
+|---------|-----------------|
 | **home** | V is inside a supported apartment |
-| **combat** | V is in a fight or hostile area (also supports location/region matching) |
-| **nude** | The game naturally undresses V (shower, romance scenes) |
+| **combat** | V is in a fight or hostile area (also supports region matching) |
+| **nude** | The game undresses V (shower, romance scenes) |
 | **ripper** | V is sitting in a ripperdoc chair |
-| **pinned (`!`)** | A `!`-prefixed outfit is equipped — blocks all automatic swaps |
+| **pinned (`!`)** | A `!` outfit is equipped — all auto-swaps are blocked |
 
 ---
 
 ## How Matching Works
 
-Outfit names are split into keywords by any non-alphanumeric separator (spaces, slashes, dashes, etc.). Each keyword is matched bidirectionally against the current location — `badlands` in an outfit name matches `southbadlands` in the location enum, and vice versa.
+Outfit names are split into words by any separator (spaces, slashes, dashes, etc.). Each word is checked against the current location name — the mod is flexible, so `badlands` in an outfit name matches `southbadlands` in the location, and vice versa.
 
-When multiple outfits match the same context, one is **picked at random** each time. This means having `home cozy`, `home towel`, and `home lazy` gives V a different look on each apartment visit.
+When multiple outfits match, one is **picked at random**. So having `home cozy`, `home towel`, and `home lazy` gives V a different look on each apartment visit.
 
-### Separators as OR
-
-Separators between **location** keywords mean OR:
+### Separators Between Locations = "Either One"
 
 > `badlands/coastview` applies in **either** Badlands or Coastview.
 
-### Multiple Region Keywords as AND
+### Multiple Region Keywords = "Both Must Match"
 
-Multiple **region** keywords in one name mean ALL must match:
-
-> `corpo club vip` only applies at locations tagged as **both** corpo and club (e.g. Clouds, Embers).
+> `corpo club vip` only applies where the location is **both** corpo and club (e.g. Clouds, Embers).
 
 ---
 
@@ -67,20 +63,20 @@ Multiple **region** keywords in one name mean ALL must match:
 ```
 V enters a new location
 │
-├─ Is V wearing a pinned (!) outfit?
+├─ Wearing a pinned (!) outfit?
 │  └─ Yes → skip all swaps
 │
-├─ Is V in combat or a danger zone?
-│  └─ Yes → combat outfit (see Combat & Danger Zones)
+├─ In combat or a hostile area?
+│  └─ Yes → combat outfit
 │
-├─ Is V inside an apartment?
+├─ Inside an apartment?
 │  └─ Yes → home outfit
 │
 ├─ Exact location match?
-│  └─ Yes → apply it
+│  └─ Yes → use it
 │
 ├─ Region keyword match?
-│  └─ Yes → apply best match (highest keyword count)
+│  └─ Yes → use best match (most keywords)
 │
-└─ No match → outdoor outfit
+└─ Nothing matches → outdoor outfit
 ```

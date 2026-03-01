@@ -1,75 +1,70 @@
 # Outfit Keywords
 
-Dynamic Wardrobe matches Equipment-EX outfit names by keyword. Name your outfits using these conventions and the mod handles the rest.
+Name your Equipment-EX outfits with the right keywords and Dynamic Wardrobe knows what to do with them.
 
 ---
 
 ## Activity Keywords
 
-These are matched by **prefix** — the outfit name must start with the keyword.
+These keywords tell the mod *when* to use an outfit. The outfit name must **start** with one of these:
 
-| Keyword | When Applied | Examples |
-|---------|-------------|----------|
-| `home` | Entering any supported apartment | `home cozy`, `home towel` |
-| `outdoor` | Leaving apartment or no location match | `outdoor streetwear`, `outdoor casual` |
-| `nude` | Shower/sleep scenes inside apartments | `nude` |
+| Keyword | When It's Used | Examples |
+|---------|---------------|----------|
+| `home` | At any supported apartment | `home cozy`, `home towel` |
+| `outdoor` | Everywhere else (the default) | `outdoor streetwear`, `outdoor casual` |
+| `nude` | Shower and sleep scenes | `nude` |
 | `ripper` | Sitting in a ripperdoc chair | `ripper casual` |
-| `combat` | Entering combat or a dangerous zone | `combat`, `combat street`, `combat badlands` |
-| `!` (prefix) | Pinned — blocks all automatic swaps | `!tactical stealth`, `!casual friday` |
+| `combat` | During fights and in hostile areas | `combat`, `combat street` |
+| `!` (prefix) | Locks the outfit — blocks all auto-swaps | `!tactical stealth`, `!casual friday` |
 
-Extra words after the keyword are just for you — **`home cozy`** and **`home towel`** both count as home outfits. Multiple outfits with the same keyword are picked at random.
+Extra words after the keyword are just labels for you — **`home cozy`** and **`home towel`** both count as home outfits. Got more than one? The mod picks one at random.
 
 ---
 
 ## Region Keywords
 
-Assign outfits to broad categories of locations instead of naming every individual area. All keywords in an outfit name must match the current location.
+Instead of naming outfits after every individual location, you can use broad region keywords. If an outfit has multiple region keywords, they all need to match.
 
-| Keyword | Areas |
-|---------|-------|
-| **corpo** | CorpoPlaza, CityCenter, Downtown, NorthOaks, CharterHill, ArasakaWaterfront, JapanTown |
-| **street** | Glen, Wellsprings, Arroyo, LittleChina, Kabuki, Northside, RanchoCoronado, VistaDelRey |
-| **wild** | Badlands, SouthBadlands, NorthBadlands, Pacifica, Coastview, WestWindEstate, Dogtown |
-| **club** | Afterlife, RiotClub, LizziesBar, Clouds, DarkMatter, Totentaz, Embers, ElCoyoteCojo |
+| Keyword | Where It Applies |
+|---------|-----------------|
+| **corpo** | Corpo Plaza, City Center, Downtown, North Oaks, Charter Hill, Arasaka Waterfront, Japantown |
+| **street** | Glen, Wellsprings, Arroyo, Little China, Kabuki, Northside, Rancho Coronado, Vista Del Rey |
+| **wild** | Badlands, South Badlands, North Badlands, Pacifica, Coastview, West Wind Estate, Dogtown |
+| **club** | Afterlife, Riot Club, Lizzie's Bar, Clouds, Dark Matter, Totentaz, Embers, El Coyote Cojo |
 
-Combine keywords for specificity: **`corpo club vip`** only applies at clubs in corpo areas (e.g. Clouds in Japantown). Higher keyword count = higher priority.
+Stacking keywords makes them more specific: **`corpo club vip`** only kicks in at clubs in corpo areas (like Clouds in Japantown). More keywords = higher priority.
 
 !!! tip "Custom mappings"
-    All region mappings are customizable — edit `Core/ContextMap.reds` to add locations, remap areas, or create entirely new keywords.
+    You can customize which locations belong to which region — edit `Core/ContextMap.reds` to remap areas or create entirely new keywords.
 
 ---
 
 ## Location Keywords
 
-For precise control, name outfits after specific locations:
+For exact control over a specific spot:
 
-1. Press **F10** in-game to see the current location enum (e.g. `Badlands_RedPeaks`)
-2. Name your outfit using any word from that location (e.g. `badlands casual`)
-3. The mod matches bidirectionally — `badlands` in the outfit name matches `southbadlands` in the location
-4. Use separators for multiple locations: `badlands/coastview` matches both areas
-5. The most specific location word matches first (right-to-left priority)
-
-Location matches always take priority over region keyword matches.
+1. Press **F10** in-game to see the current location name (e.g. `Badlands_RedPeaks`)
+2. Name your outfit using any word from that name (e.g. `badlands casual`)
+3. The mod is flexible — `badlands` in your outfit name will match `southbadlands` in the location too
+4. Use separators to share one outfit across multiple locations: `badlands/coastview` works in both
+5. A specific location match always beats a region keyword match
 
 ---
 
-## Naming Examples
+## Quick Reference
 
-| Outfit Name | What It Does |
+| Outfit Name | What Happens |
 |-------------|-------------|
-| `home cozy` | Applied at any supported apartment |
-| `outdoor streetwear` | Applied when leaving apartments or no match |
-| `nude` | Applied during shower scenes |
-| `ripper casual` | Applied at ripperdoc chairs |
-| `corpo formal` | Applied in all upscale corporate areas |
-| `street` | Applied in all gritty neighborhoods |
-| `wild tactical` | Applied in Badlands, Pacifica, Dogtown, etc. |
-| `club fancy` | Applied at nightlife venues |
-| `corpo club vip` | Applied only at clubs in corpo areas (e.g. Clouds) |
-| `badlands/coastview` | Applied in Badlands or Coastview (specific location) |
-| `japantown nightlife` | Applied in Japantown district |
-| `combat` | Applied in combat (any location) |
-| `combat street` | Applied in combat in street areas only |
-| `combat badlands` | Applied in combat in Badlands only |
-| `!tactical stealth` | Pinned — stays on through location changes and combat |
-| `!casual friday` | Pinned — consumed when V enters home, sits in ripper chair, or showers |
+| `home cozy` | Worn at any apartment |
+| `outdoor streetwear` | Worn everywhere else |
+| `nude` | Worn during shower scenes |
+| `ripper casual` | Worn at the ripperdoc |
+| `corpo formal` | Worn in upscale corporate areas |
+| `street` | Worn in gritty neighborhoods |
+| `wild tactical` | Worn in Badlands, Pacifica, Dogtown, etc. |
+| `club fancy` | Worn at nightlife venues |
+| `corpo club vip` | Worn only at clubs in corpo areas |
+| `badlands/coastview` | Worn in Badlands or Coastview |
+| `combat` | Worn in any fight |
+| `combat street` | Worn in fights in street areas |
+| `!tactical stealth` | Locked — stays on no matter what |

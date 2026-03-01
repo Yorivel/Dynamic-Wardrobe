@@ -1,12 +1,12 @@
 # Custom Apartments
 
-Dynamic Wardrobe supports modded apartments. Register any apartment by adding its entrance coordinates to `Core/CustomApartments.reds` — the mod handles the rest.
+Dynamic Wardrobe supports modded apartments. Add an apartment's entrance coordinates to `Core/CustomApartments.reds` and the mod handles the rest.
 
 ---
 
 ## Supported Apartments
 
-### Built-in (no configuration needed)
+### Built-in (no setup needed)
 
 | Apartment | Location |
 |-----------|----------|
@@ -16,37 +16,37 @@ Dynamic Wardrobe supports modded apartments. Register any apartment by adding it
 | Japantown Apartment | Japantown |
 | Corpo Plaza Apartment | Corpo Plaza |
 | Dogtown Hideout (Kress Street) | Dogtown (Phantom Liberty) |
-| Judy's Apartment | Kabuki (quest-gated) |
+| Judy's Apartment | Kabuki (unlocked by quest) |
 
 ### Pre-configured Custom Apartments
 
-| Apartment | Location | Quest Gate |
-|-----------|----------|------------|
-| River's Trailer | Badlands | "Following the River" (romance or friendship) |
+| Apartment | Location | Unlock Condition |
+|-----------|----------|-----------------|
+| River's Trailer | Badlands | Complete "Following the River" (romance or friendship) |
 
-River's apartment ships as a ready-to-use example in `CustomApartments.reds`.
+River's apartment is included as a ready-to-use example in `CustomApartments.reds`.
 
 ---
 
-## Adding Your Own Apartments
+## Adding Your Own
 
-Open `Core/CustomApartments.reds` and add entries using the builder API:
+Open `Core/CustomApartments.reds` and add entries using the config API:
 
 ```swift
 DWApartment.Add(apartments, true)
   .Entrance(-905.00, 1868.56, 42.37);
 ```
 
-### Builder API
+### Available Options
 
-| Method | Purpose |
-|--------|---------|
-| `DWApartment.Add(apartments, hasShower)` | Create a new apartment entry. `hasShower` controls shower deferral behavior |
-| `.Entrance(x, y, z)` | Add an entrance point (chain multiple for multi-entrance apartments) |
-| `.Gate("fact_name", minValue)` | Add a quest gate — AND logic (all gates must pass) |
-| `.OrGate("fact_name", minValue)` | Add an OR quest gate (at least one must pass) |
+| Method | What It Does |
+|--------|-------------|
+| `DWApartment.Add(apartments, hasShower)` | Creates a new apartment. `hasShower` controls whether the shower deferral setting applies |
+| `.Entrance(x, y, z)` | Adds a door location (use multiple times for apartments with more than one entrance) |
+| `.Gate("fact_name", minValue)` | Adds a quest requirement — ALL gates must be met |
+| `.OrGate("fact_name", minValue)` | Adds an alternative quest requirement — at least ONE must be met |
 
-### Example: Multi-entrance with quest gate
+### Example: Two entrances with a quest requirement
 
 ```swift
 DWApartment.Add(apartments, true)
@@ -55,7 +55,7 @@ DWApartment.Add(apartments, true)
   .Gate("my_quest_fact", 1);
 ```
 
-### Example: OR gate (multiple quest paths)
+### Example: Multiple quest paths (either one unlocks it)
 
 ```swift
 DWApartment.Add(apartments, false)
@@ -66,32 +66,29 @@ DWApartment.Add(apartments, false)
 
 ---
 
-## Configuration Options
+## Settings
 
 ### `hasShower`
 
-- **`true`** — the apartment has a shower. If shower deferral is enabled in settings, the home outfit won't apply until after V showers
-- **`false`** — no shower. The home outfit applies immediately on entry
+- **`true`** — the apartment has a shower. If shower deferral is turned on in mod settings, V won't change into the home outfit right away — it waits until after the shower
+- **`false`** — no shower. V changes into the home outfit immediately on entry
 
 ### Quest Gates
 
-- **`.Gate()`** — AND logic. All gates must pass for the apartment to be detected
-- **`.OrGate()`** — OR logic. At least one gate must pass. Use for apartments unlockable via multiple quest paths
+- **`.Gate()`** — AND logic. All gates must pass for the apartment to activate
+- **`.OrGate()`** — OR logic. At least one must pass. Use this for apartments that can be unlocked through different quest paths
 
 ---
 
-## How Detection Works
+## How It's Detected
 
-Custom apartments are detected using **SceneTier2 transitions + entrance proximity**:
+The mod detects custom apartments by watching for a specific game state change (scene tier transition) while V is near the configured door coordinates (~1 meter). When V leaves, the mod detects the transition back to normal gameplay and switches to the appropriate outfit.
 
-1. When the game transitions to SceneTier2 (restricted locomotion) while V is near the configured entrance coordinates (~1 meter), the apartment is detected
-2. On exit (SceneTier1 return), the home state is cleared and the normal location/context/outdoor fallback runs
-
-!!! info "Event-driven"
-    Dynamic Wardrobe is fully event-driven — it does not poll the player's position. This means open-air locations that don't trigger a scene tier change on entry (e.g. camps, tents) cannot be detected as custom apartments.
+!!! info "Limitation"
+    Open-air locations that don't trigger a scene change on entry (like camps or tents) can't be detected. The mod is fully event-driven — it doesn't constantly check V's position.
 
 ---
 
-## Finding Coordinates and Quest Facts
+## Finding Coordinates
 
-The config file includes CET console commands for looking up entrance coordinates and quest facts. Open the Cyber Engine Tweaks console in-game to use them.
+The config file includes console commands for looking up entrance coordinates and quest facts using Cyber Engine Tweaks. Open the CET console in-game to use them.

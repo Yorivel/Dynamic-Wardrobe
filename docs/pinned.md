@@ -1,57 +1,56 @@
 # Pinned Outfits
 
-Prefix any Equipment-EX outfit name with **`!`** to lock it in place. Dynamic Wardrobe will skip all automatic swaps while a pinned outfit is equipped.
+Prefix any Equipment-EX outfit name with **`!`** to lock it in place. Dynamic Wardrobe will stop all automatic swapping while that outfit is equipped.
 
 ---
 
 ## How It Works
 
-Equip a `!`-prefixed outfit via Equipment-EX and the mod stops swapping. It's that simple.
+Equip a `!`-prefixed outfit via Equipment-EX and the mod stops swapping. That's it.
 
 - **`!tactical stealth`** — V stays in this outfit no matter where you go
-- **`!my favorite look`** — location changes, combat, danger zones — all ignored
+- **`!my favorite look`** — location changes, combat, hostile areas — all ignored
 
 ### What Gets Blocked
 
-- Location changes
-- Context/region matching
-- Outdoor fallback
-- Combat and danger zone entry
-- Combat/zone exit restore
-- Home outfit restore on save/load
+- Location-based outfit changes
+- Region keyword matching
+- Combat and danger zone swaps
+- Outfit restore after combat ends
+- Outfit restore on save/load
 
-### What Still Plays Normally
+### What Still Works Normally
 
-Scenes that naturally change V's appearance still work:
+Scenes that naturally change V's appearance still play out:
 
-- Home outfit on apartment entry
-- Ripper outfit on ripperdoc chair
+- Home outfit when entering an apartment
+- Ripper outfit at the ripperdoc
 - Nude during shower/sleep
 - All scene restores
 
-These **consume the pin** — V's outfit changes, the `!` name is no longer equipped, and the mod returns to normal automatic swapping.
+These **use up the pin** — V's outfit changes, the `!` name is no longer equipped, and the mod goes back to normal swapping.
 
 ---
 
 ## Unpinning
 
-Just equip any non-`!` outfit via Equipment-EX and the mod takes over again.
+Equip any non-`!` outfit via Equipment-EX and the mod takes over again.
 
-To **re-pin** after a scene consumes it (e.g. shower → nude → home restore), simply re-equip the `!` outfit via EX.
+To **re-pin** after a scene uses it up (e.g. shower → nude → home), just re-equip the `!` outfit.
 
 ---
 
 ## Matching Exclusion
 
-Pinned outfits are **excluded from all automatic matching pools**. An outfit named `!home cozy` will never be selected as a "home" outfit by the mod — the pin only applies when V is already wearing it (equipped manually via EX).
+An outfit named `!home cozy` will **never** be automatically picked as a "home" outfit. The `!` prefix tells the mod to ignore it entirely during matching — it only activates when you manually equip it via Equipment-EX.
 
 ---
 
 ## Save/Load
 
-Pinned outfits survive save/load. Equipment-EX restores the `!` outfit visually, and Dynamic Wardrobe syncs its tracking on load to detect the pin before any outfit logic runs.
+Pinned outfits survive saving and loading. Equipment-EX restores the outfit visually, and Dynamic Wardrobe recognizes the pin as soon as the game loads.
 
 ---
 
 !!! warning "Known Limitation"
-    If you equip a pinned outfit **during** combat or a danger zone, the pin won't be detected until combat or the danger zone ends. The mod pauses outfit tracking during these states to preserve the pre-combat outfit for restoration. Re-equip the pinned outfit afterward to lock it again.
+    If you equip a pinned outfit **during** a fight or while in a hostile area, the pin won't kick in until the fight or zone ends. The mod pauses outfit tracking during combat to make sure it can restore the right outfit afterward. Just re-equip the pinned outfit once you're out of combat.

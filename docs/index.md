@@ -23,7 +23,7 @@ Name your outfits with simple keywords. The mod handles the rest.
 - [**Known Issues**](issues.md) — limitations and workarounds
 - [**Compatibility**](compatibility.md) — what this mod wraps and what conflicts
 - [**Save Data & Uninstall**](save-data.md) — safe to remove at any time
-- [**Changelog**](changelog.md) — version history
+- [**Changelog**](changelog/index.md) — version history
 
 ---
 
