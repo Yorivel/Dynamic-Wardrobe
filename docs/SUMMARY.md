@@ -24,6 +24,7 @@
 * [Save Data & Uninstall](save-data.md)
 * [Support](support.md)
 * [Changelog](changelog/README.md)
+  * [v1.5](changelog/v1.5.md)
   * [v1.4](changelog/v1.4.md)
   * [v1.3](changelog/v1.3.md)
   * [v1.2.1](changelog/v1.2.1.md)

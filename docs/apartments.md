@@ -4,7 +4,7 @@ description: Register modded apartments via config file
 
 # Custom Apartments
 
-Dynamic Wardrobe supports modded apartments. Add an apartment's entrance coordinates to `Core/CustomApartments.reds` and the mod handles the rest.
+Dynamic Wardrobe supports modded apartments. Add an apartment's entrance coordinates to `UserConfig/CustomApartments.reds` and the mod handles the rest.
 
 ## Supported Apartments
 
@@ -30,7 +30,7 @@ River's apartment is included as a ready-to-use example in `CustomApartments.red
 
 ## Adding Your Own
 
-Open `Core/CustomApartments.reds` and add entries using the config API:
+Open `UserConfig/CustomApartments.reds` and add entries using the config API:
 
 ```swift
 DWApartment.Add(apartments, true)

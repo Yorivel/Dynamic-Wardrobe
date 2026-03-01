@@ -4,7 +4,7 @@ description: Customize which locations belong to which region keywords
 
 # Context Map
 
-The Context Map controls which locations belong to which region keywords. Edit `Core/ContextMap.reds` to remap areas or create entirely new keywords.
+The Context Map controls which locations belong to which region keywords. Edit `UserConfig/ContextMap.reds` to remap areas or create entirely new keywords.
 
 ## Default Keywords
 
@@ -19,7 +19,7 @@ These keywords are what you use in outfit names — `corpo casual`, `street toug
 
 ## Quick Customization
 
-To move a location to a different region, open `Core/ContextMap.reds` and move the corresponding line from one section to another. To add a new location to an existing region, add a new line following the same pattern:
+To move a location to a different region, open `UserConfig/ContextMap.reds` and move the corresponding line from one section to another. To add a new location to an existing region, add a new line following the same pattern:
 
 ```swift
 || Equals(word, "yourlocation")

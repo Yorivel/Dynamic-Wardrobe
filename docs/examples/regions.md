@@ -42,4 +42,4 @@ V's outfits: **`outdoor`**, **`corpo casual`**, **`club fancy`**, **`corpo club 
 
 ## Custom Regions
 
-You can customize which locations belong to which region by editing `Core/ContextMap.reds`. You can even create entirely new keywords beyond the four defaults. See [Context Map](../context-map.md) for the default mappings and [Configuration Guide](../context-map-guide.md) for how to create new keywords.
+You can customize which locations belong to which region by editing `UserConfig/ContextMap.reds`. You can even create entirely new keywords beyond the four defaults. See [Context Map](../context-map.md) for the default mappings and [Configuration Guide](../context-map-guide.md) for how to create new keywords.
