@@ -13,14 +13,6 @@ Equip a `!`-prefixed outfit via Equipment-EX and the mod stops swapping. That's 
 * **`!tactical stealth`** — V stays in this outfit no matter where you go
 * **`!my favorite look`** — location changes, combat, hostile areas — all ignored
 
-### What Gets Blocked
-
-* Location-based outfit changes
-* Region keyword matching
-* Combat and danger zone swaps
-* Outfit restore after combat ends
-* Outfit restore on save/load
-
 ### What Still Works Normally
 
 Scenes that naturally change V's appearance still play out:
@@ -49,3 +41,5 @@ Pinned outfits survive saving and loading. Equipment-EX restores the outfit visu
 {% hint style="warning" %}
 **Known Limitation** — If you equip a pinned outfit **during** a fight or while in a hostile area, the pin won't kick in until the fight or zone ends. The mod pauses outfit tracking during combat to make sure it can restore the right outfit afterward. Just re-equip the pinned outfit once you're out of combat.
 {% endhint %}
+
+For how pinned outfits interact with the rest of the system, see [Priority System](priority.md).

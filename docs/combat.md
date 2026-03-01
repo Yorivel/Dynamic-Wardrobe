@@ -6,13 +6,11 @@ description: Auto-swap gear when things get hostile
 
 Dynamic Wardrobe automatically swaps to a combat outfit when V enters a fight or a hostile area, and puts the previous outfit back on when it's over.
 
-## How It Works
-
-### Fights
+## Fights
 
 When V enters combat, the mod swaps to a `combat` outfit. When the fight ends, the previous outfit comes back.
 
-### Hostile Areas
+## Hostile Areas
 
 Gang hideouts, enemy territory, and other dangerous zones trigger combat outfits even before shots are fired. If V enters an actual fight while in a dangerous zone, the outfit stays — no double-swap. When V leaves the zone, the previous outfit is restored.
 
@@ -28,11 +26,16 @@ Combine `combat` with location or region keywords for area-specific combat gear:
 | `combat badlands` | Only in Badlands specifically |
 | `combat street club` | Only at street clubs (e.g. Afterlife) |
 
-### How It Picks
+<details>
+<summary>Example</summary>
 
-```
-combat + exact location → combat + region keywords → plain "combat"
-```
+V's outfits: **`combat`**, **`combat street`**, **`combat wild`**
+
+* Fight in Kabuki (street area) → **`combat street`**
+* Fight in the Badlands (wild area) → **`combat wild`**
+* Fight at Corpo Plaza → **`combat`** (no specific match, so the generic one applies)
+
+</details>
 
 ## Good to Know
 
@@ -43,3 +46,5 @@ combat + exact location → combat + region keywords → plain "combat"
 ## Quest Outfit Protection
 
 When the game forces V into a quest outfit (e.g. the diving suit), Dynamic Wardrobe steps back completely — no swaps of any kind until the quest outfit is removed.
+
+For how combat outfits interact with the rest of the system, see [Priority System](priority.md).

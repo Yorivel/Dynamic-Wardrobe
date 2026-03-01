@@ -4,11 +4,37 @@ description: How the mod decides which outfit to apply
 
 # Priority System
 
-When V moves to a new location, Dynamic Wardrobe picks the best outfit using a simple order. Higher priority always wins.
+When V moves to a new location or enters a new context, Dynamic Wardrobe picks the best outfit using a strict order. Higher priority always wins.
 
-## How Outfits Are Picked
+## Pinned Outfits
 
-### 1. Exact Location Match *(highest priority)*
+A `!`-prefixed outfit **blocks everything** — no location, region, combat, or danger zone swaps. Only scenes that naturally change V's appearance (home entry, shower, ripper) can override it, and doing so consumes the pin.
+
+## Combat & Danger Zones
+
+When V enters combat or a hostile area, combat outfits take priority over all location matching. Combat outfits have their own internal priority:
+
+```
+combat + exact location → combat + region keywords → plain "combat"
+```
+
+Combat outfits are skipped at home and during ripperdoc sessions. Location swaps are paused until the fight or zone ends.
+
+## Home, Nude & Ripper
+
+These activate based on game context, regardless of location:
+
+| Context | When It's Active |
+|---------|-----------------|
+| **home** | V is inside a supported apartment |
+| **nude** | The game undresses V (shower, romance scenes) |
+| **ripper** | V is sitting in a ripperdoc chair |
+
+## Location Matching
+
+When none of the above contexts apply, the mod picks an outfit based on where V is:
+
+### 1. Exact Location Match *(highest)*
 
 If you have an outfit named after the specific location, it wins.
 
@@ -16,29 +42,13 @@ If you have an outfit named after the specific location, it wins.
 
 ### 2. Region Keyword Match
 
-If there's no exact match, the mod checks region keywords (`corpo`, `street`, `wild`, `club`).
-
-> `club casual` applies at any club when there's no specific outfit for that venue.
-
-More keywords = more specific = higher priority.
+If there's no exact match, the mod checks region keywords (`corpo`, `street`, `wild`, `club`). More keywords = more specific = higher priority.
 
 > `corpo club` beats `club` at a corpo club.
 
-### 3. `outdoor` *(lowest priority)*
+### 3. `outdoor` *(lowest)*
 
 If nothing else matches, V wears the `outdoor` outfit.
-
-## Special Contexts
-
-These take over when they're active, regardless of location:
-
-| Context | When It's Active |
-|---------|-----------------|
-| **home** | V is inside a supported apartment |
-| **combat** | V is in a fight or hostile area (also supports region matching) |
-| **nude** | The game undresses V (shower, romance scenes) |
-| **ripper** | V is sitting in a ripperdoc chair |
-| **pinned (`!`)** | A `!` outfit is equipped — all auto-swaps are blocked |
 
 ## How Matching Works
 
@@ -63,7 +73,7 @@ V enters a new location
 │  └─ Yes → skip all swaps
 │
 ├─ In combat or a hostile area?
-│  └─ Yes → combat outfit
+│  └─ Yes → combat outfit (location/region-aware)
 │
 ├─ Inside an apartment?
 │  └─ Yes → home outfit
