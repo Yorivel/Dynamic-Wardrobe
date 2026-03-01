@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Home](index.md)
+* [Home](README.md)
 
 ## Getting Started
 
@@ -26,7 +26,7 @@
 
 ## Changelog
 
-* [Overview](changelog/index.md)
+* [Overview](changelog/README.md)
 * [v1.4](changelog/v1.4.md)
 * [v1.3](changelog/v1.3.md)
 * [v1.2.1](changelog/v1.2.1.md)
