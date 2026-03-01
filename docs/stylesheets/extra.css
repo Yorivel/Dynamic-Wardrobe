@@ -7,15 +7,15 @@
 :root {
   --md-primary-fg-color: #333333;
   --md-primary-bg-color: #ffffff;
-  --md-accent-fg-color: #c9a96e;
+  --md-accent-fg-color: #B9B73F;
 }
 
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #252526;
   --md-primary-bg-color: #1e1e1e;
-  --md-accent-fg-color: #c9a96e;
+  --md-accent-fg-color: #B9B73F;
   --md-default-bg-color: #1e1e1e;
-  --md-typeset-a-color: #c9a96e;
+  --md-typeset-a-color: #B9B73F;
 }
 
 /* === Typography — relaxed, GitBook-like === */
@@ -68,8 +68,8 @@
 }
 
 .md-typeset a:hover {
-  color: #d4b97a;
-  border-bottom-color: rgba(201, 169, 110, 0.3);
+  color: #c9c754;
+  border-bottom-color: rgba(185, 183, 63, 0.3);
 }
 
 /* === Permalink anchors (hidden) === */
