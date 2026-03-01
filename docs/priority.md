@@ -10,19 +10,19 @@ When V moves to a new location or enters a new context, Dynamic Wardrobe picks t
 
 A `!`-prefixed outfit blocks everything — no location, region, combat, or danger zone swaps. Only scenes that naturally change V's appearance (home entry, shower, ripper) can override it, and doing so consumes the pin. See [Pinned Outfits](pinned.md) for details.
 
-## Combat & Danger Zones
-
-When V enters combat or a hostile area, combat outfits take priority over all location matching. Combat outfits can be location-aware too — see [Combat & Danger Zones](combat.md) for details.
-
 ## Home, Nude & Ripper
 
-These activate based on game context, regardless of location:
+These are the only things that can break through a pin. They activate based on game context, regardless of location:
 
 | Context | When It's Active |
 |---------|--------------------|
 | **home** | V is inside a supported apartment |
 | **nude** | The game undresses V (shower, romance scenes) |
 | **ripper** | V is sitting in a ripperdoc chair |
+
+## Combat & Danger Zones
+
+When V enters combat or a hostile area, combat outfits take priority over all location matching. Combat outfits can be location-aware too — see [Combat & Danger Zones](combat.md) for details.
 
 ## Location Matching
 
