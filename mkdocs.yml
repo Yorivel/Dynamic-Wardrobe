@@ -1,0 +1,53 @@
+site_name: Dynamic Wardrobe
+site_description: Automatic outfit swapping for Cyberpunk 2077 — powered by Equipment-EX
+site_url: https://strahlimeier.github.io/dynamic-wardrobe/
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: custom
+    accent: red
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  icon:
+    logo: material/hanger
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Quick Setup: quickstart.md
+    - Outfit Keywords: keywords.md
+    - Priority System: priority.md
+  - Features:
+    - Combat & Danger Zones: combat.md
+    - Pinned Outfits: pinned.md
+    - Custom Apartments: apartments.md
+  - Reference:
+    - Known Issues: issues.md
+    - Compatibility: compatibility.md
+    - Save Data & Uninstall: save-data.md
+    - Changelog: changelog.md
