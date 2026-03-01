@@ -1,5 +1,5 @@
 ---
-description: Automatic outfit swapping for Cyberpunk 2077 — powered by Equipment-EX
+description: Dynamic Wardrobe — Automatic outfit swapping for Cyberpunk 2077 — powered by Equipment-EX
 ---
 
 # Dynamic Wardrobe
