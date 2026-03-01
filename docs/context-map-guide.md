@@ -65,7 +65,3 @@ Use the new keyword in Equipment-EX outfit names: `fancy dinner`, `fancy gala`, 
 ## A Location Can Have Multiple Keywords
 
 A location can belong to more than one keyword. For example, Clouds is both `corpo` and `club`. This is what makes stacking work — `corpo club vip` matches at Clouds because both keywords are active.
-
-{% hint style="info" %}
-**Heavy Hearts** has no location enum in the game, so it cannot be detected by the mod. This is a game limitation, not a mod bug.
-{% endhint %}

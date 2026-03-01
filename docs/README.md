@@ -44,6 +44,10 @@ Not sure where to start? [Quick Setup](quickstart.md) gets you running in under 
 [Save Data & Uninstall](save-data.md)
 {% endcontent-ref %}
 
+{% content-ref url="support.md" %}
+[Support](support.md)
+{% endcontent-ref %}
+
 {% content-ref url="changelog/README.md" %}
 [Changelog](changelog/README.md)
 {% endcontent-ref %}

@@ -56,3 +56,5 @@ The mod detects custom apartments by watching for a specific game state change (
 ## Finding Coordinates
 
 The config file includes console commands for looking up entrance coordinates and quest facts using Cyber Engine Tweaks. Open the CET console in-game to use them.
+
+For the list of built-in apartments, see [Custom Apartments](apartments.md).

@@ -13,16 +13,18 @@ Equip a `!`-prefixed outfit via Equipment-EX and the mod stops swapping. That's 
 * **`!tactical stealth`** — V stays in this outfit no matter where you go
 * **`!my favorite look`** — location changes, combat, hostile areas — all ignored
 
-### What Still Works Normally
+### What Consumes the Pin
 
-Scenes that naturally change V's appearance still play out:
+These scenes change V's appearance and **use up the pin** — the `!` outfit is replaced, and the mod goes back to normal swapping:
 
 * Home outfit when entering an apartment
-* Ripper outfit at the ripperdoc
 * Nude during shower/sleep
-* All scene restores
 
-These **use up the pin** — V's outfit changes, the `!` name is no longer equipped, and the mod goes back to normal swapping.
+To re-pin afterward, just re-equip the `!` outfit via Equipment-EX.
+
+### What Doesn't Consume the Pin
+
+Ripper outfits are temporary scene overrides — the pinned outfit is **restored** when the ripperdoc session ends. The pin survives.
 
 ## Unpinning
 

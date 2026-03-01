@@ -38,6 +38,3 @@ If you equip a pinned (`!`) outfit during a fight or in a hostile area, the pin 
 
 If two Equipment-EX outfits use the exact same items, the game reports both as "equipped" at the same time. This can confuse the mod's tracking. Avoid creating outfits with identical item combinations.
 
-## Config Files Overwritten on Update
-
-`CustomApartments.reds` and `ContextMap.reds` are user-editable config files. **Back them up before updating** — new versions will overwrite them.

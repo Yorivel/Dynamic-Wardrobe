@@ -12,11 +12,11 @@ When the game forces V into a quest outfit (e.g. the diving suit), Dynamic Wardr
 
 ## Pinned Outfits
 
-A `!`-prefixed outfit blocks everything — no location, region, combat, or danger zone swaps. Only scenes that naturally change V's appearance (home entry, shower, ripper) can override it, and doing so consumes the pin. See [Pinned Outfits](pinned.md) for details.
+A `!`-prefixed outfit blocks everything — no location, region, combat, or danger zone swaps. Only scenes that naturally change V's appearance (home entry, shower) can override it, and doing so consumes the pin. Ripper outfits temporarily override the pin but restore it when the session ends. See [Pinned Outfits](pinned.md) for details.
 
 ## Home, Nude & Ripper
 
-These are the only things that can break through a pin. They activate based on game context, regardless of location:
+These activate based on game context, regardless of location. Home and nude consume the pin; ripper temporarily overrides it but restores the pinned outfit afterward.
 
 | Context | When It's Active |
 |---------|--------------------|
@@ -61,10 +61,9 @@ flowchart TD
     J -- No --> L{Region keyword match?}
     L -- Yes --> M[Best match]
     L -- No --> N[Outdoor outfit]
-
-    style O fill:none,stroke:#888,stroke-dasharray: 5 5
-    O["Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits"]
 ```
+
+*Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits.*
 
 </div>
 
