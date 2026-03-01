@@ -1,8 +1,10 @@
+---
+description: Full reference of all outfit keywords — activity, region, and location
+---
+
 # Outfit Keywords
 
 Name your Equipment-EX outfits with the right keywords and Dynamic Wardrobe knows what to do with them.
-
----
 
 ## Activity Keywords
 
@@ -19,8 +21,6 @@ These keywords tell the mod *when* to use an outfit. The outfit name must **star
 
 Extra words after the keyword are just labels for you — **`home cozy`** and **`home towel`** both count as home outfits. Got more than one? The mod picks one at random.
 
----
-
 ## Region Keywords
 
 Instead of naming outfits after every individual location, you can use broad region keywords. If an outfit has multiple region keywords, they all need to match.
@@ -34,10 +34,9 @@ Instead of naming outfits after every individual location, you can use broad reg
 
 Stacking keywords makes them more specific: **`corpo club vip`** only kicks in at clubs in corpo areas (like Clouds in Japantown). More keywords = higher priority.
 
-!!! tip "Custom mappings"
-    You can customize which locations belong to which region — edit `Core/ContextMap.reds` to remap areas or create entirely new keywords.
-
----
+{% hint style="info" %}
+**Custom mappings** — You can customize which locations belong to which region — edit `Core/ContextMap.reds` to remap areas or create entirely new keywords.
+{% endhint %}
 
 ## Location Keywords
 
@@ -48,8 +47,6 @@ For exact control over a specific spot:
 3. The mod is flexible — `badlands` in your outfit name will match `southbadlands` in the location too
 4. Use separators to share one outfit across multiple locations: `badlands/coastview` works in both
 5. A specific location match always beats a region keyword match
-
----
 
 ## Quick Reference
 

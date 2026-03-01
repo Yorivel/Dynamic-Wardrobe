@@ -1,8 +1,10 @@
+---
+description: How the mod decides which outfit to apply
+---
+
 # Priority System
 
 When V moves to a new location, Dynamic Wardrobe picks the best outfit using a simple order. Higher priority always wins.
-
----
 
 ## How Outfits Are Picked
 
@@ -26,8 +28,6 @@ More keywords = more specific = higher priority.
 
 If nothing else matches, V wears the `outdoor` outfit.
 
----
-
 ## Special Contexts
 
 These take over when they're active, regardless of location:
@@ -39,8 +39,6 @@ These take over when they're active, regardless of location:
 | **nude** | The game undresses V (shower, romance scenes) |
 | **ripper** | V is sitting in a ripperdoc chair |
 | **pinned (`!`)** | A `!` outfit is equipped — all auto-swaps are blocked |
-
----
 
 ## How Matching Works
 
@@ -55,8 +53,6 @@ When multiple outfits match, one is **picked at random**. So having `home cozy`,
 ### Multiple Region Keywords = "Both Must Match"
 
 > `corpo club vip` only applies where the location is **both** corpo and club (e.g. Clouds, Embers).
-
----
 
 ## Visual Summary
 

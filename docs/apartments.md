@@ -1,8 +1,10 @@
+---
+description: Register modded apartments via config file
+---
+
 # Custom Apartments
 
 Dynamic Wardrobe supports modded apartments. Add an apartment's entrance coordinates to `Core/CustomApartments.reds` and the mod handles the rest.
-
----
 
 ## Supported Apartments
 
@@ -25,8 +27,6 @@ Dynamic Wardrobe supports modded apartments. Add an apartment's entrance coordin
 | River's Trailer | Badlands | Complete "Following the River" (romance or friendship) |
 
 River's apartment is included as a ready-to-use example in `CustomApartments.reds`.
-
----
 
 ## Adding Your Own
 
@@ -64,30 +64,25 @@ DWApartment.Add(apartments, false)
   .OrGate("quest_path_b", 1);
 ```
 
----
-
 ## Settings
 
 ### `hasShower`
 
-- **`true`** — the apartment has a shower. If shower deferral is turned on in mod settings, V won't change into the home outfit right away — it waits until after the shower
-- **`false`** — no shower. V changes into the home outfit immediately on entry
+* **`true`** — the apartment has a shower. If shower deferral is turned on in mod settings, V won't change into the home outfit right away — it waits until after the shower
+* **`false`** — no shower. V changes into the home outfit immediately on entry
 
 ### Quest Gates
 
-- **`.Gate()`** — AND logic. All gates must pass for the apartment to activate
-- **`.OrGate()`** — OR logic. At least one must pass. Use this for apartments that can be unlocked through different quest paths
-
----
+* **`.Gate()`** — AND logic. All gates must pass for the apartment to activate
+* **`.OrGate()`** — OR logic. At least one must pass. Use this for apartments that can be unlocked through different quest paths
 
 ## How It's Detected
 
 The mod detects custom apartments by watching for a specific game state change (scene tier transition) while V is near the configured door coordinates (~1 meter). When V leaves, the mod detects the transition back to normal gameplay and switches to the appropriate outfit.
 
-!!! info "Limitation"
-    Open-air locations that don't trigger a scene change on entry (like camps or tents) can't be detected. The mod is fully event-driven — it doesn't constantly check V's position.
-
----
+{% hint style="info" %}
+**Limitation** — Open-air locations that don't trigger a scene change on entry (like camps or tents) can't be detected. The mod is fully event-driven — it doesn't constantly check V's position.
+{% endhint %}
 
 ## Finding Coordinates
 

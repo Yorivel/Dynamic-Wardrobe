@@ -1,10 +1,10 @@
+---
+description: Automatic outfit swapping for Cyberpunk 2077 — powered by Equipment-EX
+---
+
 # Dynamic Wardrobe
 
-**Automatic, context-driven outfit swapping for Cyberpunk 2077 — powered by [Equipment-EX](https://www.nexusmods.com/cyberpunk2077/mods/6945).**
-
 Name your outfits with simple keywords. The mod handles the rest.
-
----
 
 ## Getting Started
 
@@ -56,8 +56,6 @@ Name your outfits with simple keywords. The mod handles the rest.
 [Changelog](changelog/README.md)
 {% endcontent-ref %}
 
----
-
 ## Requirements
 
 | Mod | Purpose |
@@ -80,8 +78,6 @@ These mods are not required, but unlock additional features. Without them, the r
 | [Hangout Romances](https://www.nexusmods.com/cyberpunk2077/mods/18972) | Drive scene outfit handling |
 | [Immersive Shower](https://www.nexusmods.com/cyberpunk2077/mods/27532) | Eliminates the shower scene flash (see [Known Issues](issues.md)) |
 
----
-
 ## Installation
 
 1. Extract the archive
@@ -103,12 +99,10 @@ These mods are not required, but unlock additional features. Without them, the r
 
 Delete the `r6/scripts/Dynamic Wardrobe` folder and `r6/input/DynamicWardrobeInput.xml`. See [Save Data & Uninstall](save-data.md) for details on what the mod writes to your save.
 
----
-
 ## Mod Settings
 
 All settings can be adjusted in real-time through **Settings → Mod Settings → Dynamic Wardrobe**:
 
-- **Master Toggle** — completely enable/disable the mod without uninstalling
-- **Show Location Key** — configurable keybind (default: F10) to display the current location name
-- **Shower Deferral** — when enabled, the home outfit won't apply immediately on entering an apartment. Instead, it applies after the game naturally undresses V (shower, sleep, etc.)
+* **Master Toggle** — completely enable/disable the mod without uninstalling
+* **Show Location Key** — configurable keybind (default: F10) to display the current location name
+* **Shower Deferral** — when enabled, the home outfit won't apply immediately on entering an apartment. Instead, it applies after the game naturally undresses V (shower, sleep, etc.)

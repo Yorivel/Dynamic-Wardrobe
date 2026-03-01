@@ -1,3 +1,7 @@
+---
+description: Safe to remove at any time
+---
+
 # Save Data & Uninstall
 
 ## What Persists in Your Save
@@ -13,10 +17,10 @@ Three possible values total.
 
 ## What Does NOT Persist
 
-- Outfit selections (managed entirely by Equipment-EX)
-- Location state, custom location flags, ripper state
-- Cached outfit names, block flags, callback handles
-- All runtime state is cleared on game exit
+* Outfit selections (managed entirely by Equipment-EX)
+* Location state, custom location flags, ripper state
+* Cached outfit names, block flags, callback handles
+* All runtime state is cleared on game exit
 
 ## Is It Safe to Uninstall?
 
