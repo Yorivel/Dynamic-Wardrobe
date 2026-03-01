@@ -41,12 +41,15 @@ flowchart TD
     A[V enters a new location] --> B{Pinned outfit?}
     B -- Yes --> C[Skip all swaps]
     B -- No --> D{Home / Nude / Ripper?}
-    D -- Yes --> E[Context outfit]
-    D -- No --> F{Combat or hostile area?}
-    F -- Yes --> G[Combat outfit]
-    F -- No --> H{Exact location match?}
-    H -- Yes --> I[Use it]
-    H -- No --> J{Region keyword match?}
-    J -- Yes --> K[Best match]
-    J -- No --> L[Outdoor outfit]
+    D -- Yes --> E{Shower Deferral on?}
+    E -- No --> F[Context outfit]
+    E -- Yes --> G[Wait until undressed]
+    G --> F
+    D -- No --> H{Combat or hostile area?}
+    H -- Yes --> I[Combat outfit]
+    H -- No --> J{Exact location match?}
+    J -- Yes --> K[Use it]
+    J -- No --> L{Region keyword match?}
+    L -- Yes --> M[Best match]
+    L -- No --> N[Outdoor outfit]
 ```
