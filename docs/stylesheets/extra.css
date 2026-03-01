@@ -5,17 +5,17 @@
 /* === Color Palette === */
 
 :root {
-  --md-primary-fg-color: #3b82c4;
+  --md-primary-fg-color: #333333;
   --md-primary-bg-color: #ffffff;
-  --md-accent-fg-color: #4a9ade;
+  --md-accent-fg-color: #c9a96e;
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #3b82c4;
-  --md-primary-bg-color: #1a1a1a;
-  --md-accent-fg-color: #4a9ade;
-  --md-default-bg-color: #1a1a1a;
-  --md-typeset-a-color: #6baadc;
+  --md-primary-fg-color: #252526;
+  --md-primary-bg-color: #1e1e1e;
+  --md-accent-fg-color: #c9a96e;
+  --md-default-bg-color: #1e1e1e;
+  --md-typeset-a-color: #c9a96e;
 }
 
 /* === Typography — relaxed, GitBook-like === */
@@ -68,8 +68,8 @@
 }
 
 .md-typeset a:hover {
-  color: #8bbde8;
-  border-bottom-color: rgba(139, 189, 232, 0.3);
+  color: #d4b97a;
+  border-bottom-color: rgba(201, 169, 110, 0.3);
 }
 
 /* === Permalink anchors (hidden) === */

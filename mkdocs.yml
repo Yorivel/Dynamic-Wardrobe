@@ -7,7 +7,7 @@ theme:
   palette:
     scheme: slate
     primary: custom
-    accent: indigo
+    accent: amber
   font: false
   features:
     - navigation.sections
@@ -35,7 +35,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
+  - Home: README.md
   - Getting Started:
     - Quick Setup: quickstart.md
     - Outfit Keywords: keywords.md
@@ -50,7 +50,7 @@ nav:
     - Compatibility: compatibility.md
     - Save Data & Uninstall: save-data.md
   - Changelog:
-    - Overview: changelog/index.md
+    - Overview: changelog/README.md
     - v1.4: changelog/v1.4.md
     - v1.3: changelog/v1.3.md
     - v1.2.1: changelog/v1.2.1.md
