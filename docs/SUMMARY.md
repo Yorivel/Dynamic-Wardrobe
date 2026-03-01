@@ -2,7 +2,8 @@
 
 * [Home](README.md)
 * [Quick Setup](quickstart.md)
-* [Outfit Keywords](keywords.md)
+* [Advanced Setup](advanced.md)
+  * [All Location Enums](location-enums.md)
 * [Priority System](priority.md)
 * [Examples](examples.md)
 * [Combat & Danger Zones](combat.md)

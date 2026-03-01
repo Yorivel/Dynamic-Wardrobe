@@ -12,8 +12,8 @@ Name your outfits with simple keywords. The mod handles the rest.
 [Quick Setup](quickstart.md)
 {% endcontent-ref %}
 
-{% content-ref url="keywords.md" %}
-[Outfit Keywords](keywords.md)
+{% content-ref url="advanced.md" %}
+[Advanced Setup](advanced.md)
 {% endcontent-ref %}
 
 {% content-ref url="priority.md" %}
