@@ -24,10 +24,10 @@ Name your outfits with simple keywords. The mod handles the rest.
 [Examples](examples.md)
 {% endcontent-ref %}
 
-## Features
+## Configuration
 
-{% content-ref url="apartments.md" %}
-[Custom Apartments](apartments.md)
+{% content-ref url="configuration.md" %}
+[User Configuration](configuration.md)
 {% endcontent-ref %}
 
 ## Reference

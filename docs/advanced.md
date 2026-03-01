@@ -29,9 +29,7 @@ V's outfits: **`outdoor`**, **`corpo elegant`**, **`street tough`**, **`club par
 
 </details>
 
-{% hint style="info" %}
-**Custom mappings** — You can customize which locations belong to which region — edit `Core/ContextMap.reds` to remap areas or create entirely new keywords.
-{% endhint %}
+These mappings are customizable — see [Context Map](context-map.md) for details.
 
 ## Stacking Keywords
 
