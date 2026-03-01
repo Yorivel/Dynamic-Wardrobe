@@ -9,18 +9,18 @@
 }
 
 .md-typeset {
-  font-size: 0.75rem;
+  font-size: 0.65rem !important;
   line-height: 1.6;
 }
 
 .md-typeset h1 {
-  font-size: 1.6rem;
+  font-size: 1.4rem !important;
 }
 
 .md-typeset h2 {
-  font-size: 1.25rem;
+  font-size: 1.1rem !important;
 }
 
 .md-typeset h3 {
-  font-size: 1rem;
+  font-size: 0.9rem !important;
 }
