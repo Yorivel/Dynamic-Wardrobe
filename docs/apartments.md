@@ -81,7 +81,7 @@ DWApartment.Add(apartments, false)
 The mod detects custom apartments by watching for a specific game state change (scene tier transition) while V is near the configured door coordinates (~1 meter). When V leaves, the mod detects the transition back to normal gameplay and switches to the appropriate outfit.
 
 {% hint style="info" %}
-**Limitation** — Open-air locations that don't trigger a scene change on entry (like camps or tents) can't be detected. The mod is fully event-driven — it doesn't constantly check V's position.
+**Why some locations won't work** — Custom apartment detection relies on the game's scene tier system. When V walks through a door into an interior, the game transitions from Tier 1 (free roam) to Tier 2 (restricted movement) — that transition is what the mod listens for. Open-air locations like camps, tents, or rooftops never trigger this transition because there's no loading door, so the mod has no event to react to. This isn't something that can be worked around — the game simply doesn't signal these entries.
 {% endhint %}
 
 ## Finding Coordinates
