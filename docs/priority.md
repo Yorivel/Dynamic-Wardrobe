@@ -37,6 +37,8 @@ For details on how matching, separators, and keyword stacking work, see [Priorit
 <details>
 <summary>Visual Summary</summary>
 
+<div align="center">
+
 ```mermaid
 flowchart TD
     A[V enters a new location] --> B{Pinned outfit?}
@@ -57,5 +59,7 @@ flowchart TD
     style O fill:none,stroke:#888,stroke-dasharray: 5 5
     O["Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits"]
 ```
+
+</div>
 
 </details>
