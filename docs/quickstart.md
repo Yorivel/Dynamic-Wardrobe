@@ -4,6 +4,10 @@ description: Get up and running in under a minute
 
 # Quick Setup
 
+{% hint style="info" %}
+**Starting fresh?** If you already have Equipment-EX outfits saved from before installing Dynamic Wardrobe, consider deleting them and recreating your outfits following the naming patterns above. Outfits with names that don't match the mod's keywords will be ignored, and names that accidentally collide with location or context keywords can cause unexpected behavior.
+{% endhint %}
+
 Open Equipment-EX and save outfits with these names:
 
 * **`home`** — what V wears at the apartment
@@ -13,10 +17,6 @@ Open Equipment-EX and save outfits with these names:
 * **`ripper`** — what V wears at the ripperdoc (requires [Immersive Rippers](https://www.nexusmods.com/cyberpunk2077/mods/7064))
 
 That's it! Walk into your apartment and the mod takes over.
-
-{% hint style="info" %}
-**Starting fresh?** If you already have Equipment-EX outfits saved from before installing Dynamic Wardrobe, consider deleting them and recreating your outfits following the naming patterns above. Outfits with names that don't match the mod's keywords will be ignored, and names that accidentally collide with location or context keywords can cause unexpected behavior.
-{% endhint %}
 
 {% hint style="info" %}
 **Avoid redundant names.** Each keyword serves a specific purpose in the mod's matching system — combining keywords that already overlap (like putting `outdoor` together with another keyword) won't work as expected. Check the [Advanced Setup](advanced.md) guide to understand how keywords interact before getting creative with outfit names.
