@@ -28,6 +28,17 @@ These activate based on game context, regardless of location. Home and nude cons
 
 When V enters combat or a hostile area, combat outfits take priority over all location matching. Combat outfits can be location-aware too — see [Combat & Danger Zones](combat.md) for details.
 
+## Clubs & Venues
+
+At supported clubs, the mod applies club-specific outfits using the same matching logic as outdoor locations — but scoped to `club`-prefixed outfits. See [Custom Places](places.md) for the list of supported clubs.
+
+1. **Club + location keyword** — `club afterlife` only at Afterlife
+2. **Club + region keyword** — `club corpo` at clubs in corpo areas
+3. **Plain `club`** — fallback for any club without a specific match
+4. If no club outfits exist, falls through to normal location matching below
+
+Combat outfits work normally at clubs (unlike apartments where combat is skipped).
+
 ## Location Matching
 
 When none of the above contexts apply, the mod picks an outfit based on where V is:
@@ -56,7 +67,9 @@ flowchart TD
     G -- No --> H[Home outfit immediately]
     G -- Yes --> I[Defer until undressed]
     I --> H
-    F -- No --> J{Exact location match?}
+    F -- No --> P{At a club/venue?}
+    P -- Yes --> S[Club outfit]
+    P -- No --> J{Exact location match?}
     J -- Yes --> K[Use it]
     J -- No --> L{Region keyword match?}
     L -- Yes --> M[Best match]

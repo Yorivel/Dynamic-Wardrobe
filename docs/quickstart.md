@@ -14,6 +14,14 @@ Open Equipment-EX and save outfits with these names:
 
 That's it! Walk into your apartment and the mod takes over.
 
+{% hint style="info" %}
+**Starting fresh?** If you already have Equipment-EX outfits saved from before installing Dynamic Wardrobe, consider deleting them and recreating your outfits following the naming patterns above. Outfits with names that don't match the mod's keywords will be ignored, and names that accidentally collide with location or context keywords can cause unexpected behavior.
+{% endhint %}
+
+{% hint style="info" %}
+**Avoid redundant names.** Each keyword serves a specific purpose in the mod's matching system — combining keywords that already overlap (like putting `outdoor` together with another keyword) won't work as expected. Check the [Advanced Setup](advanced.md) guide to understand how keywords interact before getting creative with outfit names.
+{% endhint %}
+
 Multiple outfits with the same keyword? The mod picks one at random — so **`home cozy`**, **`home towel`**, and **`home lazy`** give V a different look each time.
 
 {% hint style="info" %}

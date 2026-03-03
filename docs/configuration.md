@@ -1,13 +1,13 @@
 ---
-description: User-editable config files for region mappings and modded apartments
+description: User-editable config files for region mappings, apartments, and clubs
 ---
 
 # User Configuration
 
-Dynamic Wardrobe includes two config files you can customize to fit your setup. Both live in the `UserConfig/` folder and are plain Redscript — no coding experience needed, just follow the examples.
+Dynamic Wardrobe includes three config files you can customize to fit your setup. All live in the `UserConfig/` folder and are plain Redscript — no coding experience needed, just follow the examples.
 
 {% hint style="warning" %}
-**Back up before updating the mod.** These files are overwritten when you install a new version. Save copies of `UserConfig/ContextMap.reds` and `UserConfig/CustomApartments.reds` before updating.
+**Back up before updating the mod.** These files are overwritten when you install a new version. Save copies of `UserConfig/ContextMap.reds`, `UserConfig/CustomApartments.reds`, and `UserConfig/CustomPlaces.reds` before updating.
 {% endhint %}
 
 {% content-ref url="context-map.md" %}
@@ -16,4 +16,8 @@ Dynamic Wardrobe includes two config files you can customize to fit your setup. 
 
 {% content-ref url="apartments.md" %}
 [Custom Apartments](apartments.md)
+{% endcontent-ref %}
+
+{% content-ref url="places.md" %}
+[Custom Places](places.md)
 {% endcontent-ref %}

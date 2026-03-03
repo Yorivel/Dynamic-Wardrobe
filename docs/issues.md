@@ -22,9 +22,9 @@ If you save right next to a door, the mod might misread V's position on load. **
 
 Skipping the ripperdoc animation may occasionally cause the outfit to not swap correctly. Sitting in the chair again or reloading fixes it.
 
-## Heavy Hearts Not Detected
+## ~~Heavy Hearts Not Detected~~ (Fixed in v1.6)
 
-Heavy Hearts doesn't have a location name in the game's data, so the `club` keyword can't detect it. All other nightlife venues work fine — see [All Location Enums](location-enums.md) for the full list.
+Heavy Hearts previously had no location enum, making it invisible to the mod. As of v1.6, it's detected via scene tier transition (staircase entry) and fully supports club outfits.
 
 ## Custom Apartments Need a Scene Transition
 

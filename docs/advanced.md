@@ -70,4 +70,20 @@ V's outfits: **`outdoor casual`**, **`street tough`**, **`afterlife`**, **`badla
 
 </details>
 
+## Naming Pitfalls
+
+A few naming patterns that seem logical but don't work as expected:
+
+| Name | Problem | Why |
+|------|---------|-----|
+| `outdoor street` | Redundant | `street` already falls back to `outdoor` when there's no match. Adding `outdoor` as a keyword forces BOTH to match — but `outdoor` isn't a region keyword, so it never matches anything |
+| `outdoor corpo` | Same issue | `outdoor` isn't recognized by the matching system. The outfit either matches `corpo` (and ignores the `outdoor` word) or doesn't match at all |
+| `home street` | Reserved prefix collision | `home` is a reserved prefix — this outfit will only activate at home, never as a street outfit. The `street` keyword is ignored |
+| `combat club` | Reserved prefix collision | `combat` is reserved — this activates during combat at clubs, not as a club outfit. That's the intended behavior if you want club-specific combat gear, but not if you wanted a club outfit |
+| `street afterlife` | Conflicting scope | `street` is a region keyword and `afterlife` is a location keyword. The mod sees both as location/context words that must ALL match — this works (Afterlife is in a street area), but `afterlife` alone is simpler and does the same thing |
+
+{% hint style="info" %}
+**Rule of thumb**: reserved prefixes (`home`, `nude`, `ripper`, `combat`) define *when* the outfit activates. Region keywords (`corpo`, `street`, `wild`, `club`) define *where*. Location keywords (`afterlife`, `kabuki`, etc.) are even more specific. Don't mix categories unless you understand how they interact — see [Priority System](priority.md).
+{% endhint %}
+
 For the full priority breakdown, see [Priority System](priority.md).

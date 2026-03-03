@@ -10,7 +10,7 @@ Dynamic Wardrobe writes two quest facts to your save file:
 
 | Data | Type | Purpose |
 |------|------|---------|
-| `dw_is_at_home` | Quest fact (0, 1, or 2) | Tracks whether V was inside an apartment when you saved. `0` = no, `1` = vanilla apartment, `2` = custom apartment |
+| `dw_is_at_home` | Quest fact (integer) | Tracks whether V was inside a known location when you saved. `0` = no, `1` = vanilla apartment, `2` = custom apartment, `10+` = club/venue (unique place ID) |
 | `dw_block_location` | Quest fact (0 or 1) | Suppresses outfit changes during scripted scenes (cutscenes, braindances). Automatically cleared when gameplay resumes |
 
 ## What Does NOT Persist

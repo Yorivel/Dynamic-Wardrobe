@@ -39,7 +39,7 @@ V's outfits: **`combat`**, **`combat street`**, **`combat wild`**
 
 ## Good to Know
 
-* Combat outfits are **skipped at home** and during ripperdoc sessions
+* Combat outfits are **skipped at home** and during ripperdoc sessions, but **work normally at clubs**
 * Location swaps are **paused during fights** — V won't change into a location outfit mid-combat
 * If the previous outfit no longer exists when combat ends, the mod picks the best match for V's current location instead
 
