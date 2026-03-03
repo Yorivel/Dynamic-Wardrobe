@@ -5,7 +5,7 @@ description: Get up and running in under a minute
 # Quick Setup
 
 {% hint style="info" %}
-**Starting fresh?** If you already have Equipment-EX outfits saved from before installing Dynamic Wardrobe, consider deleting them and recreating your outfits following the naming patterns above. Outfits with names that don't match the mod's keywords will be ignored, and names that accidentally collide with location or context keywords can cause unexpected behavior.
+**Starting fresh?** If you already have Equipment-EX outfits saved from before installing Dynamic Wardrobe, consider deleting them and recreating your outfits following the naming patterns below. Outfits with names that don't match the mod's keywords will be ignored, and names that accidentally collide with location or context keywords can cause unexpected behavior.
 {% endhint %}
 
 Open Equipment-EX and save outfits with these names:
