@@ -37,8 +37,6 @@ At supported clubs, the mod applies club-specific outfits using the same matchin
 3. **Plain `club`** — fallback for any club without a specific match
 4. If no club outfits exist, falls through to normal location matching below
 
-Combat outfits work normally at clubs (unlike apartments where combat is skipped).
-
 ## Location Matching
 
 When none of the above contexts apply, the mod picks an outfit based on where V is:

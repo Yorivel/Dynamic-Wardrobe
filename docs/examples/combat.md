@@ -40,16 +40,6 @@ V's outfits: **`outdoor`**, **`afterlife`**, **`combat`**
 | Fight starts at the Afterlife | **`combat`** | Combat overrides location |
 | Fight ends | **`afterlife`** (restored) | Back to location match |
 
-## Combat Skipped at Home
-
-V's outfits: **`home cozy`**, **`combat tactical`**
-
-| What Happens | Outfit |
-|-------------|--------|
-| At home, enemies attack nearby | **`home cozy`** (no swap) |
-
-Combat outfits don't activate inside apartments or during ripperdoc sessions.
-
 ## Danger Zones
 
 Gang hideouts and hostile areas trigger combat outfits even before shots are fired.

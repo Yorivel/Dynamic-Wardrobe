@@ -22,7 +22,7 @@ For compatible locations, add the entrance coordinates to `UserConfig/CustomPlac
 | Dark Matter | Japantown | Elevator (scene tier) |
 | Totentaz | Northside | Entrance proximity |
 | Embers | Glen | Entrance proximity |
-| El Coyote Cojo | Vista del Rey | Entrance proximity |
+| El Coyote Cojo | Glen | Entrance proximity |
 | Heavy Hearts | Dogtown | Staircase (scene tier) |
 
 **Unsupported:** Clouds (Japantown) — the club's open layout and unreliable location enum make detection impossible. Use a `!` pinned outfit if you want a specific look there.
