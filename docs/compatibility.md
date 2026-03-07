@@ -43,4 +43,4 @@ Symptoms: outfits not applying, EX overlay stuck in wrong state.
 * **UI/HUD mods** — fully compatible. No shared systems. The mod only shows occasional notifications via SimpleScreenMessage.
 * **Other wardrobe/clothing mods** — compatible unless they also automate Equipment-EX outfits.
 
-Having issues? See [Support](support.md) for how to report a bug. The mod is also [safe to uninstall](save-data.md) at any time..
+Having issues? See [Support](support.md) for how to report a bug. The mod is also [safe to uninstall](save-data.md) at any time.
