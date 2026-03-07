@@ -17,13 +17,17 @@ Dynamic Wardrobe hooks into the following game systems:
 * **PlayerPuppet.OnCombatStateChanged** — wraps for combat outfit entry/exit
 * **PlayerPuppet.OnZoneChange** — wraps for dangerous zone detection
 * **PlayerPuppet.OnSceneTierChange** — wraps for scene tier location blocking
+* **PlayerPuppet.OnVehicleStateChange** — wraps for vehicle mount/dismount detection
+* **WeatherScriptListener** — wraps `OnRainIntensityTypeChanged` for weather-aware outfits
+* **TimeSystem** — registers interval listeners for day/night outfit switching
+* **PlayerPuppet.OnGameAttached** — registers shuffle timer via `GameLoopType.Default` delay
 
 ## High Risk — Will Definitely Conflict
 
 {% hint style="danger" %}
 **Other Equipment-EX automation mods** — Any mod that also wraps QuestDisable/QuestRestore wardrobe requests or manages EX outfit loading will conflict. Both mods will fight over which outfit to apply during scene transitions.
 
-Example: [Apartment Outfits](https://www.nexusmods.com/cyberpunk2077/mods/21876)
+Example: [Apartment Outfits](https://www.nexusmods.com/cyberpunk2077/mods/21876) — if you want Apartment Outfits to handle home/shower outfits while keeping Dynamic Wardrobe for everything else, disable **Home Outfits** in Mod Settings. DW will skip all apartment outfit logic and let the other mod handle it.
 {% endhint %}
 
 {% hint style="danger" %}
