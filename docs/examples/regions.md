@@ -23,7 +23,7 @@ V's outfits: **`outdoor`**, **`club fancy`**, **`corpo club vip`**
 
 | Where V Is | Outfit | Why |
 |-----------|--------|-----|
-| Clouds (corpo + club) | **`corpo club vip`** | Both `corpo` and `club` match — 2 keywords beats 1 |
+| Dark Matter (corpo + club) | **`corpo club vip`** | Both `corpo` and `club` match — 2 keywords beats 1 |
 | Lizzie's Bar (street + club) | **`club fancy`** | `club` matches, but `corpo` doesn't — `corpo club vip` is skipped |
 | Corpo Plaza (corpo only) | **`outdoor`** | `corpo club vip` needs both — plaza isn't a club |
 
@@ -34,7 +34,7 @@ V's outfits: **`outdoor`**, **`corpo casual`**, **`club fancy`**, **`corpo club 
 | Where V Is | Outfit | Why |
 |-----------|--------|-----|
 | Afterlife | **`afterlife`** | Exact location always beats any region |
-| Clouds | **`corpo club vip`** | 2 region keywords beat 1 |
+| Dark Matter | **`corpo club vip`** | 2 region keywords beat 1 |
 | Embers | **`corpo club vip`** | Same — corpo + club area |
 | Lizzie's Bar | **`club fancy`** | Street area, so `corpo club vip` doesn't apply |
 | Corpo Plaza | **`corpo casual`** | Only `corpo` matches, no club |

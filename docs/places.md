@@ -24,6 +24,7 @@ For compatible locations, add the entrance coordinates to `UserConfig/CustomPlac
 | Embers | Glen | Entrance proximity |
 | El Coyote Cojo | Glen | Entrance proximity |
 | Heavy Hearts | Dogtown | Staircase (scene tier) |
+| Red Dirt | Arroyo | Entrance proximity (2 entrances) |
 
 **Unsupported:** Clouds (Japantown) — the club's open layout and unreliable location enum make detection impossible. Use a `!` pinned outfit if you want a specific look there.
 

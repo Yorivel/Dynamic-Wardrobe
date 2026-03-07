@@ -20,7 +20,7 @@ Separators between location words mean **"either one"**:
 
 Multiple region keywords in the same outfit name mean **"all must match"**:
 
-> `corpo club vip` only applies where the location is **both** corpo and club (e.g. Clouds, Embers).
+> `corpo club vip` only applies where the location is **both** corpo and club (e.g. Dark Matter, Embers).
 
 More keywords = more specific = higher priority. So `corpo club` beats `club` at a corpo club.
 

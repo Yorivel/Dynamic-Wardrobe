@@ -6,9 +6,9 @@ description: Create new region keywords and remap locations
 
 ## How It Works
 
-The mod splits your current location enum into words (e.g. `JapanTown_Clouds` → `japantown`, `clouds`) and checks each word against the mappings in `UserConfig/ContextMap.reds`. Matching words assign region keywords to the location — Clouds gets both `corpo` and `club` because `japantown` maps to `corpo` and `clouds` maps to `club`.
+The mod splits your current location enum into words (e.g. `JapanTown_DarkMatter` → `japantown`, `darkmatter`) and checks each word against the mappings in `UserConfig/ContextMap.reds`. Matching words assign region keywords to the location — Dark Matter gets both `corpo` and `club` because `japantown` maps to `corpo` and `darkmatter` maps to `club`.
 
-When multiple outfit names match, more keywords = higher priority. So `corpo club vip` (2 matches) beats `club fancy` (1 match) at Clouds.
+When multiple outfit names match, more keywords = higher priority. So `corpo club vip` (2 matches) beats `club fancy` (1 match) at Dark Matter.
 
 ## Adding a Location to an Existing Keyword
 
@@ -64,6 +64,6 @@ Use the new keyword in Equipment-EX outfit names: `fancy dinner`, `fancy gala`, 
 
 ## A Location Can Have Multiple Keywords
 
-A location can belong to more than one keyword. For example, Clouds is both `corpo` and `club`. This is what makes stacking work — `corpo club vip` matches at Clouds because both keywords are active.
+A location can belong to more than one keyword. For example, Dark Matter is both `corpo` and `club`. This is what makes stacking work — `corpo club vip` matches at Dark Matter because both keywords are active.
 
 For the default keyword mappings, see [Context Map](context-map.md).

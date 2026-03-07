@@ -15,7 +15,7 @@ Four broad keywords cover whole groups of locations at once:
 | **corpo** | Corpo Plaza, City Center, Downtown, North Oaks, Charter Hill, Arasaka Waterfront, Japantown |
 | **street** | Glen, Wellsprings, Arroyo, Little China, Kabuki, Northside, Rancho Coronado, Vista Del Rey |
 | **wild** | Badlands, South Badlands, North Badlands, Pacifica, Coastview, West Wind Estate, Dogtown |
-| **club** | Afterlife, Riot Club, Lizzie's Bar, Clouds, Dark Matter, Totentaz, Embers, El Coyote Cojo |
+| **club** | Afterlife, Riot Club, Lizzie's Bar, Dark Matter, Totentaz, Embers, El Coyote Cojo, Heavy Hearts, Red Dirt |
 
 <details>
 <summary>Example</summary>
@@ -35,7 +35,7 @@ These mappings are customizable — see [Context Map](context-map.md) for detail
 
 Combine region keywords for more specific matching. If an outfit has multiple region keywords, they all need to match — and more keywords means higher priority.
 
-**`corpo club vip`** only kicks in at clubs in corpo areas (like Clouds in Japantown). At a street club like Lizzie's Bar, it won't apply.
+**`corpo club vip`** only kicks in at clubs in corpo areas (like Dark Matter in Japantown). At a street club like Lizzie's Bar, it won't apply.
 
 <details>
 <summary>Example</summary>
@@ -43,7 +43,7 @@ Combine region keywords for more specific matching. If an outfit has multiple re
 V's outfits: **`outdoor`**, **`corpo casual`**, **`club fancy`**, **`corpo club vip`**, **`afterlife`**
 
 * At the Afterlife → **`afterlife`** (exact location always wins)
-* At Clouds (corpo + club) → **`corpo club vip`** (2 keywords beat 1)
+* At Dark Matter (corpo + club) → **`corpo club vip`** (2 keywords beat 1)
 * At Lizzie's Bar (street + club) → **`club fancy`** (`corpo club vip` doesn't apply — not a corpo area)
 * At Corpo Plaza (corpo, no club) → **`corpo casual`**
 * In the Badlands → **`outdoor`**
