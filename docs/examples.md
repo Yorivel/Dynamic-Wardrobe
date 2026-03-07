@@ -18,6 +18,10 @@ Walk through real scenarios to see how Dynamic Wardrobe picks outfits — includ
 [Region Keywords](examples/regions.md)
 {% endcontent-ref %}
 
+{% content-ref url="examples/vehicles.md" %}
+[Vehicles](examples/vehicles.md)
+{% endcontent-ref %}
+
 {% content-ref url="examples/combat.md" %}
 [Combat](examples/combat.md)
 {% endcontent-ref %}

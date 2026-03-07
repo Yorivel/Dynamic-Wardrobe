@@ -37,9 +37,21 @@ V's outfits: **`combat`**, **`combat street`**, **`combat wild`**
 
 </details>
 
+## Combat Mode
+
+Some game areas are tagged as hostile despite having no enemies (e.g. North Oaks drive-in theater). If you're getting unwanted combat outfit changes in peaceful areas, adjust the combat mode in **Settings → Mod Settings → Dynamic Wardrobe → Behavior**:
+
+| Mode | What It Does |
+|------|-------------|
+| **Combat + Danger Zones** | Default — reacts to both fights and hostile area tags |
+| **Combat Only** | Ignores danger zone tags — only reacts to actual fights |
+| **Danger Zones Only** | Ignores combat PSM — only reacts to danger zone tags |
+| **Off** | No combat outfits at all |
+
 ## Good to Know
 
 * Location swaps are **paused during fights** — V won't change into a location outfit mid-combat
 * If the previous outfit no longer exists when combat ends, the mod picks the best match for V's current location instead
+* Combat outfits support [weather and time keywords](weather-time.md) — `combat rain`, `combat night`, etc.
 
 For how combat outfits interact with the rest of the system, see [Priority System](priority.md).

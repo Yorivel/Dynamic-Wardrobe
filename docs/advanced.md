@@ -83,7 +83,21 @@ A few naming patterns that seem logical but don't work as expected:
 | `street afterlife` | Conflicting scope | `street` is a region keyword and `afterlife` is a location keyword. The mod sees both as location/context words that must ALL match — this works (Afterlife is in a street area), but `afterlife` alone is simpler and does the same thing |
 
 {% hint style="info" %}
-**Rule of thumb**: reserved prefixes (`home`, `nude`, `ripper`, `combat`) define *when* the outfit activates. Region keywords (`corpo`, `street`, `wild`, `club`) define *where*. Location keywords (`afterlife`, `kabuki`, etc.) are even more specific. Don't mix categories unless you understand how they interact — see [Priority System](priority.md).
+**Rule of thumb**: reserved prefixes (`home`, `nude`, `ripper`, `combat`, `car`, `bike`, `vehicle`) define *when* the outfit activates. Region keywords (`corpo`, `street`, `wild`, `club`) define *where*. Location keywords (`afterlife`, `kabuki`, etc.) are even more specific. Don't mix categories unless you understand how they interact — see [Priority System](priority.md).
 {% endhint %}
+
+## More Features
+
+{% content-ref url="vehicles.md" %}
+[Vehicle Outfits](vehicles.md) — automatic outfit swapping when V drives or rides
+{% endcontent-ref %}
+
+{% content-ref url="weather-time.md" %}
+[Weather & Time of Day](weather-time.md) — rain, dry, day, and night as outfit modifiers
+{% endcontent-ref %}
+
+{% content-ref url="shuffling.md" %}
+[Outfit Shuffling](shuffling.md) — automatic rotation on a timer
+{% endcontent-ref %}
 
 For the full priority breakdown, see [Priority System](priority.md).

@@ -16,6 +16,18 @@ Not sure where to start? [Quick Setup](quickstart.md) gets you running in under 
 [Advanced Setup](advanced.md)
 {% endcontent-ref %}
 
+{% content-ref url="vehicles.md" %}
+[Vehicle Outfits](vehicles.md)
+{% endcontent-ref %}
+
+{% content-ref url="weather-time.md" %}
+[Weather & Time of Day](weather-time.md)
+{% endcontent-ref %}
+
+{% content-ref url="shuffling.md" %}
+[Outfit Shuffling](shuffling.md)
+{% endcontent-ref %}
+
 {% content-ref url="priority.md" %}
 [Priority System](priority.md)
 {% endcontent-ref %}
@@ -83,10 +95,10 @@ These mods are not required, but unlock additional features. Without them, the r
 ## Updating
 
 {% hint style="warning" %}
-**Always delete the old version before installing a new one.** Leftover scripts from previous versions can cause conflicts and errors. `CustomApartments.reds`, `ContextMap.reds`, and `CustomPlaces.reds` are user-editable config files — back them up before deleting, as new versions will overwrite them.
+**Always delete the old version before installing a new one.** Leftover scripts from previous versions can cause conflicts and errors. Files in `UserConfig/` are user-editable config files — back them up before deleting, as new versions will overwrite them.
 {% endhint %}
 
-1. Back up `UserConfig/CustomApartments.reds`, `UserConfig/ContextMap.reds`, and `UserConfig/CustomPlaces.reds` if you've customized them
+1. Back up `UserConfig/CustomApartments.reds`, `UserConfig/ContextMap.reds`, `UserConfig/CustomPlaces.reds`, and `UserConfig/VehicleContextMap.reds` if you've customized them
 2. **Delete** the `r6/scripts/Dynamic Wardrobe` folder and `r6/input/DynamicWardrobeInput.xml`
 3. Install the new version
 4. Restore your backed-up config files
@@ -100,5 +112,11 @@ Delete the `r6/scripts/Dynamic Wardrobe` folder and `r6/input/DynamicWardrobeInp
 All settings can be adjusted in real-time through **Settings → Mod Settings → Dynamic Wardrobe**:
 
 * **Master Toggle** — completely enable/disable the mod without uninstalling
-* **Show Location Key** — configurable keybind (default: F10) to display the current location name
-* **Shower Deferral** — when enabled, the home outfit won't apply immediately on entering an apartment. Instead, it applies after the game naturally undresses V (shower, sleep, etc.)
+* **Home Outfits** — toggle home/nude/shower outfit management (disable for compatibility with other apartment mods)
+* **Shower Deferral** — defer home outfit until after V showers instead of immediately on entry
+* **Passenger Block** — block outfit changes while V is a passenger (prevents swaps during quest rides)
+* **Combat Mode** — control when combat outfits activate: Combat + Danger Zones, Combat Only, Danger Zones Only, or Off
+* **Day / Night** — configure day/night boundaries for time-aware outfits
+* **Shuffling** — automatic outfit rotation: Off, Context (re-roll within current area), or Chaos (any outfit)
+* **Entrance Radius** — adjust apartment entrance detection range (troubleshooting)
+* **Show Location Key** — configurable keybind (default: F10) to display current location, vehicle info, and naming tips

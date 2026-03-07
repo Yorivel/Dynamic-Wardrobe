@@ -24,6 +24,10 @@ These activate based on game context, regardless of location. Home and nude cons
 | **nude** | The game undresses V (shower, romance scenes) |
 | **ripper** | V is sitting in a ripperdoc chair |
 
+## Vehicle Outfits
+
+When V mounts a vehicle, vehicle outfits take priority. All location, combat, weather, and shuffle changes are paused while mounted. On dismount, the mod picks a fresh outfit for V's current location. See [Vehicle Outfits](vehicles.md) for details.
+
 ## Combat & Danger Zones
 
 When V enters combat or a hostile area, combat outfits take priority over all location matching. Combat outfits can be location-aware too — see [Combat & Danger Zones](combat.md) for details.
@@ -45,6 +49,8 @@ When none of the above contexts apply, the mod picks an outfit based on where V 
 2. **Region keywords** — broad area matches like `corpo`, `street`, `wild`, `club`
 3. **`outdoor`** — the fallback when nothing else matches
 
+Within each tier, [weather and time keywords](weather-time.md) (`rain`, `dry`, `day`, `night`) act as tiebreakers — an outfit with matching conditions wins over one without, but never jumps to a higher tier.
+
 For details on how matching, separators, and keyword stacking work, see [Priority Details](priority-advanced.md).
 
 <details>
@@ -54,11 +60,13 @@ For details on how matching, separators, and keyword stacking work, see [Priorit
 
 ```mermaid
 flowchart TD
-    A[V enters a new location] --> Q{Quest outfit active?}
+    A[V enters a new context] --> Q{Quest outfit active?}
     Q -- Yes --> R[All swaps disabled]
     Q -- No --> B{Pinned outfit?}
     B -- Yes --> C[Skip all swaps]
-    B -- No --> D{Combat or hostile area?}
+    B -- No --> V{In a vehicle?}
+    V -- Yes --> W[Vehicle outfit]
+    V -- No --> D{Combat or hostile area?}
     D -- Yes --> E[Combat outfit]
     D -- No --> F{Inside an apartment?}
     F -- Yes --> G{Shower Deferral on?}
@@ -74,7 +82,7 @@ flowchart TD
     L -- No --> N[Outdoor outfit]
 
     style O fill:none,stroke:#888,stroke-dasharray: 5 5
-    O["Ripper outfits are temporary scene overrides — the previous outfit is restored when the scene ends, including pinned outfits"]
+    O["Ripper outfits are temporary scene overrides. Weather/time keywords are tiebreakers within each tier."]
 ```
 
 </div>

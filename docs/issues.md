@@ -22,9 +22,13 @@ If you save right next to a door, the mod might misread V's position on load. **
 
 Skipping the ripperdoc animation may occasionally cause the outfit to not swap correctly. Sitting in the chair again or reloading fixes it.
 
-## ~~Heavy Hearts Not Detected~~ (Fixed in v1.6)
+## Weather Limited to Rain
 
-Heavy Hearts previously had no location enum, making it invisible to the mod. As of v1.6, it's detected via scene tier transition (staircase entry) and fully supports club outfits.
+Weather detection only supports `rain` and `dry`. Other conditions like fog, sandstorm, and sunshine can't be queried by Redscript mods — the game's weather API only exposes rain intensity. If CDPR adds more weather queries in the future, additional keywords can be added.
+
+## Danger Zone False Positives
+
+Some peaceful areas in the game are tagged as hostile zones (e.g. the North Oak drive-in theater). This can trigger combat outfits unexpectedly. Set **Combat Mode** to **Combat Only** in Mod Settings to ignore zone tags and only react to actual fights.
 
 ## Custom Apartments Need a Scene Transition
 
