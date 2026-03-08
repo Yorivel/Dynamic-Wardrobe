@@ -7,6 +7,7 @@
   * [Pinned Outfits](pinned.md)
   * [All Location Enums](location-enums.md)
   * [Vehicle Outfits](vehicles.md)
+    * [Vehicle Accessories](accessories.md)
   * [Weather & Time of Day](weather-time.md)
   * [Priority System](priority.md)
   * [Priority Details](priority-advanced.md)

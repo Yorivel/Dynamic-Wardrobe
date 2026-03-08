@@ -63,6 +63,14 @@ V's outfits: **`car corpo`**, **`car caliburn`**, **`car herrera outlaw`**
 
 </details>
 
+## Accessories
+
+Don't want a full outfit swap — just a helmet or gloves on top of V's current look? Save an Equipment-EX outfit with just those items and name it with the `(acc)` prefix: **`(acc) bike helmet`**, **`(acc) car corpo gloves`**.
+
+Accessories are only applied when **no full vehicle outfit matches** — they're a fallback, not a layer on top of vehicle outfits. On dismount, layered items are stripped automatically.
+
+For the full details, see [Vehicle Accessories](accessories.md).
+
 ## Decorative Names
 
 Extra words that aren't vehicle brands, models, or context keywords are ignored — use them freely to describe your outfits:

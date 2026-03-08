@@ -26,7 +26,7 @@ These activate based on game context, regardless of location. Home and nude cons
 
 ## Vehicle Outfits
 
-When V mounts a vehicle, vehicle outfits take priority. All location, combat, weather, and shuffle changes are paused while mounted. On dismount, the mod picks a fresh outfit for V's current location. See [Vehicle Outfits](vehicles.md) for details.
+When V mounts a vehicle, vehicle outfits take priority. All location, combat, weather, and shuffle changes are paused while mounted. On dismount, the mod picks a fresh outfit for V's current location. If no full vehicle outfit matches, [accessories](accessories.md) are layered on top of V's current outfit instead. See [Vehicle Outfits](vehicles.md) for details.
 
 ## Combat & Danger Zones
 
@@ -65,7 +65,9 @@ flowchart TD
     Q -- No --> B{Pinned outfit?}
     B -- Yes --> C[Skip all swaps]
     B -- No --> V{In a vehicle?}
-    V -- Yes --> W[Vehicle outfit]
+    V -- Yes --> W{Full vehicle outfit?}
+    W -- Yes --> X[Vehicle outfit]
+    W -- No --> Y[Layer accessories]
     V -- No --> D{Combat or hostile area?}
     D -- Yes --> E[Combat outfit]
     D -- No --> F{Inside an apartment?}
