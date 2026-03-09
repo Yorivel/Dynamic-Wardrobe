@@ -18,7 +18,7 @@ description: Config API, detection types, and finding coordinates
 
 ### `ID`
 
-A unique integer (10+) that's persisted in your save file. Each place needs its own ID — never reuse or change an existing one. The built-in clubs use IDs 10–17, so start at 20 or higher for your own.
+A unique integer (10+) that's persisted in your save file. Each place needs its own ID — never reuse or change an existing one. The built-in clubs use IDs 10–25, so start at 30 or higher for your own.
 
 ### `EnumName`
 
