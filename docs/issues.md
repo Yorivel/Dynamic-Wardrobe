@@ -14,9 +14,9 @@ During shower scenes, there's a brief visual flash when switching outfits. This 
 
 ## Loading a Save Near Doors
 
-The game simplifies location names when saving — for example, `LittleChina_Afterlife` becomes just `LittleChina` after reloading. This affects all specific locations, not just apartments.
+The game simplifies location names when saving — for example, `LittleChina_Afterlife` becomes just `LittleChina` after reloading. Apartments and clubs are not affected — their state is persisted across save/load via quest facts. This only impacts locations that aren't registered as apartments or places (e.g. specific sub-districts).
 
-If you save right next to a door, the mod might misread V's position on load. **Save a step or two away from entrances** to avoid this. The correct outfit will kick in as soon as you walk out and back in.
+If you save right next to a door, the mod might misread V's position on load — for example, saving within a club's entrance radius could trigger a false-positive entry on reload. **Save a step or two away from entrances** to avoid this. If the state gets stuck, use the debug overlay (F10 → press down → hold down to clear) to reset it.
 
 ## Ripperdoc Fast-Forward
 
@@ -40,5 +40,5 @@ If you equip a pinned (`!`) outfit during a fight or in a hostile area, the pin 
 
 ## Duplicate Outfit Items
 
-If two Equipment-EX outfits use the exact same items, the game reports both as "equipped" at the same time. This can confuse the mod's tracking. Avoid creating outfits with identical item combinations.
+If two Equipment-EX outfits use the exact same items, the game reports both as "equipped" at the same time. The mod's tracking sync catches most cases, but identical outfits can still cause unexpected behavior. Avoid creating outfits with identical item combinations.
 
