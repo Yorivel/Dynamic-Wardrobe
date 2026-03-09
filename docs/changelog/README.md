@@ -4,6 +4,7 @@ description: Version history
 
 # Changelog
 
+* [**v2.1**](v2.1.md) — Vehicle Accessories, Outfit Families, Vehicle-in-Combat Setting
 * [**v2.0**](v2.0.md) — Vehicle Outfits, Weather & Time, Outfit Shuffling, Combat Mode, Debug Overlay
 * [**v1.6**](v1.6.md) — Club Outfits, Heavy Hearts, Reset Persisted State
 * [**v1.5**](v1.5.md) — Corpo Plaza Fix, Reserved Prefix Filtering, Internal Refactoring

@@ -32,6 +32,7 @@
 * [Compatibility](compatibility.md)
 * [Save Data & Uninstall](save-data.md)
 * [Changelog](changelog/README.md)
+  * [v2.1](changelog/v2.1.md)
   * [v2.0](changelog/v2.0.md)
   * [v1.6](changelog/v1.6.md)
   * [v1.5](changelog/v1.5.md)
