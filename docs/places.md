@@ -5,7 +5,7 @@ description: Register clubs and venues via config file
 # Custom Places
 
 {% hint style="warning" %}
-**Not all locations are compatible.** Place detection works in two ways: (1) entrance proximity when the game reports a matching location enum, and (2) scene tier transition for elevators and loading zones. Open-air locations without either trigger can't be detected.
+**Not all locations are compatible.** Place detection works in three ways: (1) entrance proximity when the game reports a matching location enum, (2) scene tier transition for elevators and loading zones, and (3) status effect detection for modded venues that lack unique enums or tier transitions. Open-air locations without any of these triggers can't be detected.
 {% endhint %}
 
 For compatible locations, add the entrance coordinates to `UserConfig/CustomPlaces.reds` and the mod handles the rest.
@@ -25,6 +25,18 @@ For compatible locations, add the entrance coordinates to `UserConfig/CustomPlac
 | El Coyote Cojo | Glen | Entrance proximity |
 | Heavy Hearts | Dogtown | Staircase (scene tier) |
 | Red Dirt | Arroyo | Entrance proximity (2 entrances) |
+| 7th Hell | CityCenter/Downtown | Entrance proximity |
+| Electric Orgasm | Downtown/CityCenter | Entrance proximity |
+| Dicky Twister | Vista del Rey | Entrance proximity (4 entrances) |
+| Empathy | CityCenter/Downtown | Entrance proximity |
+| Ho-Oh | Kabuki | Entrance proximity (2 entrances) |
+| The Moth | Dogtown | Entrance proximity |
+
+### Modded (no-op if not installed)
+
+| Place | District | Detection |
+|-------|----------|-----------|
+| Gomorrah Night Club | Little China | Status effect (`NoCombat`) |
 
 **Unsupported:** Clouds (Japantown) — the club's open layout and unreliable location enum make detection impossible. Use a `!` pinned outfit if you want a specific look there.
 

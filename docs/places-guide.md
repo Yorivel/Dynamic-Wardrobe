@@ -12,6 +12,7 @@ description: Config API, detection types, and finding coordinates
 | `.District("name")` | Adds a parent district for save/load safety fallback (required — use multiple times if the game reports different districts) |
 | `.Entrance(x, y, z, radius)` | Adds a standard entrance (detected via location enum change + proximity) |
 | `.Tier2Entrance(x, y, z, radius)` | Adds an elevator/loading zone entrance (detected via scene tier change + proximity) |
+| `.StatusEffectEntrance(x, y, z, radius, t"EffectID")` | Adds a status effect entrance (detected via effect apply/remove + district + proximity) |
 
 ## Parameters
 
@@ -35,6 +36,7 @@ Detection range in game units. `1.0` for standard doors, higher for wide entranc
 
 * **`.Entrance()`** — for places with a door that the game tracks as a distinct location enum. The mod detects entry when the enum changes AND V is near the coordinates
 * **`.Tier2Entrance()`** — for places behind elevators or loading zones (like Dark Matter or Heavy Hearts). The mod detects entry when the game transitions to a restricted scene tier AND V is near the coordinates
+* **`.StatusEffectEntrance()`** — for modded venues that lack both a unique location enum and a scene tier transition. The mod detects entry when a specific status effect is applied AND V is in the correct district AND near the coordinates. Exit is detected when the effect is removed. This is primarily useful for modded clubs that apply gameplay restrictions (like `NoCombat`) on entry
 
 ## Examples
 
@@ -63,9 +65,25 @@ DWPlace.Add(places, 22, "Glen_MyVenue")
   .Entrance(-302.0, -398.0, 10.0, 2.0);
 ```
 
+### Status effect entrance (modded venue)
+
+```swift
+DWPlace.Add(places, 23, "LittleChina_MyModdedClub")
+  .District("LittleChina")
+  .StatusEffectEntrance(-500.0, 600.0, 15.0, 3.0, t"GameplayRestriction.NoCombat");
+```
+
+Use this when the venue applies a status effect on entry (e.g. `NoCombat` disabling weapons) but doesn't trigger a location enum change or scene tier transition. The effect ID must be a valid `TweakDBID` — check the mod's source or use [Simple Status Effect Manager](https://www.nexusmods.com/cyberpunk2077/mods/23699) (CET tool) to see which effects are applied when you walk in.
+
 ## How Detection Works
 
-The mod detects places by watching for either a location enum change or a scene tier transition while V is near the configured entrance coordinates. When V leaves through the same entrance, the mod detects the exit and switches to the appropriate outfit for the new location.
+The mod detects places by watching for one of three triggers while V is near the configured entrance coordinates:
+
+1. **Location enum change** (`.Entrance`) — the game reports a new location name
+2. **Scene tier transition** (`.Tier2Entrance`) — the game switches to a restricted scene tier (elevators, loading zones)
+3. **Status effect** (`.StatusEffectEntrance`) — a specific gameplay effect is applied to V (e.g. `NoCombat`), combined with a district check to avoid false positives in other areas
+
+When V leaves through the same entrance, the mod detects the exit and switches to the appropriate outfit for the new location.
 
 On save/load, the place ID is persisted in the `dw_is_at_home` quest fact. When the game reloads, the mod resolves the ID back to the full place definition and restores the correct outfit — even though the game only reports the parent district after loading.
 
@@ -86,7 +104,11 @@ print(Game.GetPlayer():GetPlayerStateMachineBlackboard():GetInt(
 Press **F10** in-game to see the current location enum (use for `EnumName` and `.District()`). After saving and reloading inside the location, press F10 again to see what the game reports — that's the district you need for `.District()`.
 
 {% hint style="info" %}
-**Choosing the right entrance type**: Walk through the entrance and check the scene tier with CET. If it changes from 1 to 2 (elevators, stairwells with loading screens), use `.Tier2Entrance()`. If it stays at 1 and the location enum changes instead, use `.Entrance()`.
+**Choosing the right entrance type**: Walk through the entrance and check the scene tier with CET. If it changes from 1 to 2 (elevators, stairwells with loading screens), use `.Tier2Entrance()`. If it stays at 1 and the location enum changes instead, use `.Entrance()`. If neither changes but a status effect is applied (check the CET status effect log or the mod's source files), use `.StatusEffectEntrance()`.
+{% endhint %}
+
+{% hint style="warning" %}
+**Status effect entrances require the effect ID to be registered.** If you add a `.StatusEffectEntrance()` with a new effect ID (one not already used by a built-in place), you must also add it to `IsRelevantEffect()` in `Events/StatusEffectHandler.reds`. This is a performance gate — unregistered effects are ignored. Currently only `GameplayRestriction.NoCombat` is registered.
 {% endhint %}
 
 For the list of built-in places, see [Custom Places](places.md).
