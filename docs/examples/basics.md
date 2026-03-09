@@ -28,6 +28,20 @@ V's outfits: **`home cozy`**, **`home towel`**, **`home lazy`**
 
 This works with any keyword — **`outdoor summer`**, **`outdoor biker`**, **`outdoor punk`** would randomize your street look too.
 
+## Outfit Families
+
+V's outfits: **`outdoor jacket day`**, **`outdoor jacket night`**, **`outdoor casual day`**, **`outdoor casual night`**, **`combat jacket`**, **`combat casual`**
+
+| What Happens | Outfit | Why |
+|-------------|--------|-----|
+| Walking around during the day | **`outdoor jacket day`** (picked at random) | |
+| Night falls | **`outdoor jacket night`** | Prefers "jacket" — matches V's current outfit family |
+| Get into a fight | **`combat jacket`** | Prefers "jacket" across systems |
+
+If V had been wearing `outdoor casual day` instead, the mod would prefer `outdoor casual night` and `combat casual`.
+
+Words like "jacket" and "casual" are **family keywords** — decorative words not used by any system. They act as tiebreakers when multiple outfits match at the same priority. See [Priority Details](../priority-advanced.md) for the full explanation.
+
 ## Shower Deferral
 
 With Shower Deferral **off** (default):
