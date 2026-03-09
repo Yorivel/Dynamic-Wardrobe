@@ -75,7 +75,7 @@ Words that aren't vehicle brands, models, or context keywords are ignored — ju
 
 ## Multiple Accessories
 
-Only **one** `(acc)` outfit is applied per ride. If multiple `(acc)` outfits tie for the same score, one is picked at random — same as full vehicle outfits.
+Only **one** `(acc)` outfit is applied per ride. If multiple `(acc)` outfits tie for the same score, one is picked at random — same as full vehicle outfits..
 
 To guarantee specific items, put everything you want layered into a single `(acc)` outfit rather than splitting across multiple outfits.
 
