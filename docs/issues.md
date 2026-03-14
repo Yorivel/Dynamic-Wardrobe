@@ -32,7 +32,9 @@ Some peaceful areas in the game are tagged as hostile zones (e.g. the North Oak 
 
 ## Custom Apartments Need a Scene Transition
 
-Custom apartments are detected when the game transitions to a restricted scene near the door coordinates. Open-air locations without this transition (like camps or tents) can't be detected. The mod doesn't check V's position constantly — it only reacts to game events.
+Custom apartments are detected when the game transitions to a restricted scene near the door coordinates. Open-air locations without this transition (like camps or tents) can't be detected as full apartments. The mod doesn't check V's position constantly — it only reacts to game events.
+
+**Exception:** Panam's bed at the new Aldecaldos camp is detected via the bed interaction (Tier 4 workspot), not a door transition. V's home outfit applies while in bed and restores on standing up. Requires the Panam romance path.
 
 ## Pinning During Combat
 
