@@ -150,15 +150,15 @@ Dogtown
 
 ## Other
 
-These locations don't belong to any region keyword. You can still name an outfit after them for an exact match (e.g. `watson casual`), but no region-based outfit will apply here — `outdoor` is the fallback.
+These locations are never reported by the game's map blackboard and **cannot be used as outfit keywords**. Parent districts (Heywood, Watson, Westbrook, SantoDomingo) only exist in the tweak hierarchy — the game always reports the sub-district level (e.g. `LittleChina`, `Kabuki`, `Glen`, `Arroyo`).
 
-To assign them to a region, add them to `UserConfig/ContextMap.reds`. See [Context Map Guide](context-map-guide.md) for how.
+Use sub-district names or context keywords (`street`, `corpo`, `wild`, `club`) to target these areas instead.
 
 ```
-Heywood
-Watson
-Westbrook
-SantoDomingo
+Heywood          (never fires — use Glen, Wellsprings instead)
+Watson           (never fires — use LittleChina, Kabuki, Northside instead)
+Westbrook        (never fires — use Japantown, CharterHill instead)
+SantoDomingo     (never fires — use Arroyo, RanchoCoronado instead)
 MorroRock
   MorroRock_NCX
 Langley_Clinic
